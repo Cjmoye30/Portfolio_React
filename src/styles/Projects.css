@@ -1,0 +1,31 @@
+/* Style sheet to keep the pseudo elements */
+
+.projectInfoOverlay {
+    display: none;
+}
+
+.projectCard:hover .projectInfoOverlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    background-color: whitesmoke;
+    color: black;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    opacity: .9;
+    animation: fadeIn .5s;
+    padding: 20px;
+    border-top: .1px solid var(--light2);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .9;
+    }
+}
