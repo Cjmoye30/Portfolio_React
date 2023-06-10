@@ -14,10 +14,8 @@ const styles = {
         alignItems: 'center',
         justifyContent: 'space-evenly',
     },
-
 }
 
-// could I create a function with all of the navigation contents and then just export it into the extension? have even more of a separation of concerns?
 
 const mql = window.matchMedia(`(min-width: 8000px)`);
 
@@ -66,8 +64,9 @@ class App extends React.Component {
                 onSetOpen={this.onSetSidebarOpen}
                 styles={{ sidebar: { background: "white" } }}
             >
+
                 <button onClick={() => this.onSetSidebarOpen(true)}>
-                    Open sidebar
+                    Menu Icon
                 </button>
             </Sidebar>
         );

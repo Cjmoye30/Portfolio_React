@@ -1,13 +1,15 @@
 import React from "react";
-import Header from "./components/Header";
+import Intro from "./components/Intro";
 import Projects from "./components/Projects";
 import Sidebar from "./components/Sidebar";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div>
-      <Sidebar />
       <Header />
+      <Sidebar />
+      <Intro />
       <Projects />
     </div>
   );
