@@ -36,7 +36,6 @@ const styles = {
     textAlign: 'center'
   }
 
-
 }
 
 function Header() {
@@ -46,22 +45,7 @@ function Header() {
     <header className="header" >
       <div className="header-content row" style={styles.headerSection}>
 
-        <div  className='col-lg-1'>
-          <div>
-            <img style={styles.logo} src={logo} alt='logo' />
-          </div>
-
-          <div style={styles.navGroup} className='navGroup'>
-            <a className="nav-links" href="#projects-section">My Work</a>
-            <a className="nav-links" href="#about-me-section">About Me</a>
-            <a className="nav-links" href="assets/pdf/CambricMoye WebDev Resume.pdf"
-              target="_blank">Resume</a>
-            <a className="nav-links" href="#contact-me">Contact</a>
-          </div>
-        </div>
-
-
-        <div className="col col-lg-11" style={styles.introCenter}>
+        <div style={styles.introCenter}>
           <img style={styles.logoMain} src={logo} alt='logo' />
           <h1 className="logo-subtitle">Cambric Moye</h1>
           <h3>Full-Stack Web Developer</h3>
