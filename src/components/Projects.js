@@ -12,14 +12,14 @@ const styles = {
   projectRow: {
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
-
+  
   projectImage: {
     height: 'auto',
     width: '100%',
   },
-
+  
   projectCard: {
     display: 'flex',
     alignItems: 'center',
@@ -30,7 +30,8 @@ const styles = {
     margin: '0 auto',
     boxShadow: '3px 3px 8px black',
     position: 'relative',
-    padding: '0'
+    padding: '0',
+    zIndex: '2'
   },
 
   projectInfoOverlay: {
