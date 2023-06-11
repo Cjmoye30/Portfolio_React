@@ -1,5 +1,10 @@
 /* Style sheet to keep the pseudo elements */
 
+/* main project will get additional styling */
+.main-project {
+    background-color: yellow;
+}
+
 .projectInfoOverlay {
     display: none;
 }
