@@ -1,7 +1,10 @@
 // this file will store all of my projects which will then get pulled into the Projects component - meaning that I define all of the project fields in this file which will then dynamically be rendered on the projects page after I import this file
 
+// Can I single out my first project out of all my other items in the array?
+// main project/centerpiece should always be at index 0
 
 const projects = [
+    // ------------ main project ------------
     {
         title: 'DreamerGPT',
         imageURL: require('../assets/images/DreamerGPT.png'),
@@ -10,8 +13,10 @@ const projects = [
         altText: 'image alt text here',
         repo: 'https://github.com/Cjmoye30/Dream_Catcher',
         site: 'https://protected-hamlet-16560.herokuapp.com/',
-        main: "main-project"
+        class: "main-project col col-lg-8"
     },
+
+    // ------------ Other projects ------------
     {
         title: 'TechBlog',
         imageURL: require('../assets/images/TechBlog.png'),
@@ -20,6 +25,7 @@ const projects = [
         altText: 'image alt text here',
         repo: 'https://github.com/Cjmoye30/Dream_Catcher',
         site: 'https://protected-hamlet-16560.herokuapp.com/',
+        class: 'col col-lg-4'
     },
     {
         title: 'RecipeHub',
@@ -29,51 +35,42 @@ const projects = [
         altText: 'image alt text here',
         repo: 'https://github.com/Cjmoye30/Dream_Catcher',
         site: 'https://protected-hamlet-16560.herokuapp.com/',
+        class: 'col col-lg-4'
+
     },
-    // {
-    //     title: 'RecipeHub',
-    //     description: 'Get or search for a recipe',
-    //     languages: 'JavaScript, HTML, CSS, Bulma',
-    //     altText: 'image alt text here',
-    //     repo: 'https://github.com/Cjmoye30/Recipe_Hub',
-    //     site: 'https://cjmoye30.github.io/Recipe_Hub/'
-    // },
-    // {
-    //     title: 'TechBlog',
-    //     description: 'Login or Signup to create, comment, and view tech related blogposts',
-    //     languages: 'ExpressJS, Sequelize, JQuery, HandlebarsJS',
-    //     imageURL:'tbd',
-    //     altText: 'image alt text here',
-    //     repo: 'https://github.com/Cjmoye30/TechBlog',
-    //     site: 'https://peaceful-oasis-37638.herokuapp.com/'
-    // },
-    // {
-    //     title: 'Simon Game',
-    //     description: 'User attempts to remember a randomly genereated sequence with increasing difficulty',
-    //     languages: 'JavaScript, HTML, CSS',
-    //     imageURL:'tbd',
-    //     altText: 'image alt text here',
-    //     repo: 'https://github.com/Cjmoye30/Simon_Game',
-    //     site: 'https://cjmoye30.github.io/Simon_Game/'
-    // },
-    // {
-    //     title: 'Coding Quiz',
-    //     description: 'Series of 10 coding related questions with a time limit',
-    //     languages: 'JavaScript, HTML, CSS',
-    //     imageURL:'tbd',
-    //     altText: 'image alt text here',
-    //     repo: 'https://github.com/Cjmoye30/Coding_Quiz',
-    //     site: 'https://cjmoye30.github.io/Coding_Quiz/'
-    // },
-    // {
-    //     title: 'Personal Portfolio',
-    //     description: 'Personal portfolio to showcase my latest work.',
-    //     languages: 'JavaScript, HTML, CSS, Bootstrap',
-    //     imageURL:'tbd',
-    //     altText: 'image alt text here',
-    //     repo: 'https://github.com/Cjmoye30/Personal_Portfolio',
-    //     site: 'https://cjmoye30.github.io/Personal_Portfolio/'
-    // }
+    {
+        title: 'Simon Game',
+        imageURL: require('../assets/images/SimonGame.png'),
+        description: 'ChatGPT to interpret dreams',
+        languages: 'ExpressJS, Sequelize, JQuery, HandlebarsJS',
+        altText: 'image alt text here',
+        repo: 'https://github.com/Cjmoye30/Dream_Catcher',
+        site: 'https://protected-hamlet-16560.herokuapp.com/',
+        class: 'col col-lg-4'
+
+    },
+    {
+        title: 'Coding Quiz',
+        imageURL: require('../assets/images/CodingQuiz.png'),
+        description: 'ChatGPT to interpret dreams',
+        languages: 'ExpressJS, Sequelize, JQuery, HandlebarsJS',
+        altText: 'image alt text here',
+        repo: 'https://github.com/Cjmoye30/Dream_Catcher',
+        site: 'https://protected-hamlet-16560.herokuapp.com/',
+        class: 'col col-lg-4'
+
+    },
+    {
+        title: 'Personal Portfolio',
+        imageURL: require('../assets/images/Portfolio.png'),
+        description: 'ChatGPT to interpret dreams',
+        languages: 'ExpressJS, Sequelize, JQuery, HandlebarsJS',
+        altText: 'image alt text here',
+        repo: 'https://github.com/Cjmoye30/Dream_Catcher',
+        site: 'https://protected-hamlet-16560.herokuapp.com/',
+        class: 'col col-lg-4'
+
+    },
 ];
 
 export default projects;

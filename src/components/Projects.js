@@ -4,12 +4,16 @@ import React from 'react';
 // Import CSS to use pseudo elements
 import '../styles/Projects.css';
 
-// import all images i'm going to need
-// import DreamerGPT from '../assets/images/DreamerGPT.png'
-// import RecipeHub from '../assets/images/RecipeHub.png'
+// inline styling
+const styles = {
+
+  projectImage: {
+    width: '100%',
+    height: 'auto'
+  }
+}
 
 function Projects({ projects }) {
-  // TODO: Add a style attribute to `section`
   return (
     <section id='projects' className="section">
 
@@ -18,20 +22,28 @@ function Projects({ projects }) {
         <h5>Some of my most recent work</h5>
       </div>
 
-      {projects.map((project) => (
-        <div className={project.main}>
-          <h1>{project.title}</h1>
-
-          {/* <img src={require(`../assets/images/${project.title}.png`)}/> */}
-          <img src={project.imageURL}/>
-
-          <p>{project.description}</p>
-          <div className='projectLinks'>
-            <a target='_blank' href={project.repo}>Repo</a>
-            <a target='_blank' href={project.site}>Site</a>
-          </div>
+      {/* get the first item in the array and using that as my main project */}
+      <div className='row main-project-row'>
+        <div className={projects[0].class}>
+          <h1>{projects[0].title}</h1>
+          <img style={styles.projectImage} src={projects[0].imageURL} />
         </div>
-      ))}
+      </div>
+
+      {/* starting from the second item in the array for the rest of the projects */}
+      <div className='row projects-row'>
+        {projects.slice(1).map((project) => (
+          <div className={project.class}>
+            <h1>{project.title}</h1>
+            <img style={styles.projectImage} src={project.imageURL} />
+            <p>{project.description}</p>
+            <div className='projectLinks'>
+              <a target='_blank' href={project.repo}>Repo</a>
+              <a target='_blank' href={project.site}>Site</a>
+            </div>
+          </div>
+        ))}
+      </div>
 
     </section>
   );

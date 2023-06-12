@@ -1,19 +1,22 @@
 
+const styles = {
+    avatar: {
+        height: '200px',
+        width: 'auto'
+    }
+}
 
 export default function AboutMe({ bio }) {
     return (
         <section id="aboutMe">
-            <div>
+            <div className="sectionHeader">
                 <h1>About Me Section</h1>
                 <h5>Who I am and my purpose</h5>
             </div>
 
-
-            {/* why are my images not pullin in from my json file? */}
-
             {bio.map((data) => (
                 <div className="about-me-wrapper">
-                    {/* <img src={data.avatar} alt="avatar" /> */}
+                    <img style={styles.avatar} className="about-me-avatar" src={data.avatar} />
 
                     <div className="pillars">
                         {data.pillars.map((pillar) => (

@@ -1,6 +1,12 @@
 /* Style sheet to keep the pseudo elements */
 
 /* main project will get additional styling */
+.main-project-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .main-project {
     background-color: yellow;
 }
@@ -34,3 +40,11 @@
         opacity: .9;
     }
 }
+
+.projects-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
