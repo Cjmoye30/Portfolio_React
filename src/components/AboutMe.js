@@ -1,3 +1,5 @@
+
+
 export default function AboutMe({ bio }) {
     return (
         <section id="aboutMe">
@@ -6,8 +8,12 @@ export default function AboutMe({ bio }) {
                 <h5>Who I am and my purpose</h5>
             </div>
 
+
+            {/* why are my images not pullin in from my json file? */}
+
             {bio.map((data) => (
                 <div className="about-me-wrapper">
+                    <img src={data.avatar} alt="avatar" />
 
                     <div className="pillars">
                         {data.pillars.map((pillar) => (

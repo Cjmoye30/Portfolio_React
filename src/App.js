@@ -8,7 +8,8 @@ import Footer from "./components/Footer";
 
 // importing data for my projects
 import projects from './data/projects'
-import bio from './data/bio'
+import bio from './data/bio.js'
+
 
 function App() {
   return (

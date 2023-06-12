@@ -1,6 +1,6 @@
 const bio = [
     {
-        avatar: 'url',
+        avatar: require('../assets/images/avatar.png').default,
         pillar1: 'Lifelong-Student',
         pillar2: 'Challenge Seeker',
         pillar3: 'Team Player',
