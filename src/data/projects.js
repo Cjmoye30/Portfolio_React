@@ -13,7 +13,7 @@ const projects = [
         altText: 'image alt text here',
         repo: 'https://github.com/Cjmoye30/Dream_Catcher',
         site: 'https://protected-hamlet-16560.herokuapp.com/',
-        class: "main-project col col-lg-8"
+        class: "col"
     },
 
     // ------------ Other projects ------------
@@ -25,7 +25,7 @@ const projects = [
         altText: 'image alt text here',
         repo: 'https://github.com/Cjmoye30/Dream_Catcher',
         site: 'https://protected-hamlet-16560.herokuapp.com/',
-        class: 'col col-lg-4'
+        class: 'col'
     },
     {
         title: 'RecipeHub',
@@ -35,7 +35,7 @@ const projects = [
         altText: 'image alt text here',
         repo: 'https://github.com/Cjmoye30/Dream_Catcher',
         site: 'https://protected-hamlet-16560.herokuapp.com/',
-        class: 'col col-lg-4'
+        class: 'col'
 
     },
     {
@@ -46,7 +46,7 @@ const projects = [
         altText: 'image alt text here',
         repo: 'https://github.com/Cjmoye30/Dream_Catcher',
         site: 'https://protected-hamlet-16560.herokuapp.com/',
-        class: 'col col-lg-4'
+        class: 'col'
 
     },
     {
@@ -57,7 +57,7 @@ const projects = [
         altText: 'image alt text here',
         repo: 'https://github.com/Cjmoye30/Dream_Catcher',
         site: 'https://protected-hamlet-16560.herokuapp.com/',
-        class: 'col col-lg-4'
+        class: 'col'
 
     },
     {
@@ -68,7 +68,7 @@ const projects = [
         altText: 'image alt text here',
         repo: 'https://github.com/Cjmoye30/Dream_Catcher',
         site: 'https://protected-hamlet-16560.herokuapp.com/',
-        class: 'col col-lg-4'
+        class: 'col'
 
     },
 ];

@@ -1,27 +1,45 @@
 /* Style sheet to keep the pseudo elements */
 
 /* main project will get additional styling */
+.project-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
 .main-project-row {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
 }
 
-.main-project {
-    background-color: yellow;
+.project-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid var(--dark1); */
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto;
+    box-shadow: 3px 3px 8px black;
+    position: relative;
+    padding: 0;
 }
 
-.projectInfoOverlay {
+.project-overlay {
     display: none;
 }
 
-.projectCard:hover .projectInfoOverlay {
+.project-card:hover .project-overlay {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     position: absolute;
-    background-color: whitesmoke;
+    background-color: green;
     color: black;
     bottom: 0;
     width: 100%;
@@ -39,12 +57,6 @@
     100% {
         opacity: .9;
     }
-}
-
-.projects-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
 }
 
 
