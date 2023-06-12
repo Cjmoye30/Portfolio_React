@@ -22,7 +22,8 @@ function Projects({ projects }) {
         <div className={project.main}>
           <h1>{project.title}</h1>
 
-          <img src={require(`../assets/images/${project.title}.png`)}/>
+          {/* <img src={require(`../assets/images/${project.title}.png`)}/> */}
+          <img src={project.imageURL}/>
 
           <p>{project.description}</p>
           <div className='projectLinks'>

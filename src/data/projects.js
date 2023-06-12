@@ -4,6 +4,7 @@
 const projects = [
     {
         title: 'DreamerGPT',
+        imageURL: require('../assets/images/DreamerGPT.png'),
         description: 'ChatGPT to interpret dreams',
         languages: 'ExpressJS, Sequelize, JQuery, HandlebarsJS',
         altText: 'image alt text here',
@@ -13,6 +14,7 @@ const projects = [
     },
     {
         title: 'TechBlog',
+        imageURL: require('../assets/images/TechBlog.png'),
         description: 'ChatGPT to interpret dreams',
         languages: 'ExpressJS, Sequelize, JQuery, HandlebarsJS',
         altText: 'image alt text here',
@@ -21,6 +23,7 @@ const projects = [
     },
     {
         title: 'RecipeHub',
+        imageURL: require('../assets/images/RecipeHub.png'),
         description: 'ChatGPT to interpret dreams',
         languages: 'ExpressJS, Sequelize, JQuery, HandlebarsJS',
         altText: 'image alt text here',
