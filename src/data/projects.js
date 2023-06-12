@@ -6,57 +6,71 @@ const projects = [
         title: 'DreamerGPT',
         description: 'ChatGPT to interpret dreams',
         languages: 'ExpressJS, Sequelize, JQuery, HandlebarsJS',
-        imageURL: '../assets/images/dreamerGPT.png',
         altText: 'image alt text here',
         repo: 'https://github.com/Cjmoye30/Dream_Catcher',
         site: 'https://protected-hamlet-16560.herokuapp.com/',
         main: "main-project"
     },
     {
-        title: 'RecipeHub',
-        description: 'Get or search for a recipe',
-        languages: 'JavaScript, HTML, CSS, Bulma',
-        imageURL:'tbd',
-        altText: 'image alt text here',
-        repo: 'https://github.com/Cjmoye30/Recipe_Hub',
-        site: 'https://cjmoye30.github.io/Recipe_Hub/'
-    },
-    {
         title: 'TechBlog',
-        description: 'Login or Signup to create, comment, and view tech related blogposts',
+        description: 'ChatGPT to interpret dreams',
         languages: 'ExpressJS, Sequelize, JQuery, HandlebarsJS',
-        imageURL:'tbd',
         altText: 'image alt text here',
-        repo: 'https://github.com/Cjmoye30/TechBlog',
-        site: 'https://peaceful-oasis-37638.herokuapp.com/'
+        repo: 'https://github.com/Cjmoye30/Dream_Catcher',
+        site: 'https://protected-hamlet-16560.herokuapp.com/',
     },
     {
-        title: 'Simon Game',
-        description: 'User attempts to remember a randomly genereated sequence with increasing difficulty',
-        languages: 'JavaScript, HTML, CSS',
-        imageURL:'tbd',
+        title: 'RecipeHub',
+        description: 'ChatGPT to interpret dreams',
+        languages: 'ExpressJS, Sequelize, JQuery, HandlebarsJS',
         altText: 'image alt text here',
-        repo: 'https://github.com/Cjmoye30/Simon_Game',
-        site: 'https://cjmoye30.github.io/Simon_Game/'
+        repo: 'https://github.com/Cjmoye30/Dream_Catcher',
+        site: 'https://protected-hamlet-16560.herokuapp.com/',
     },
-    {
-        title: 'Coding Quiz',
-        description: 'Series of 10 coding related questions with a time limit',
-        languages: 'JavaScript, HTML, CSS',
-        imageURL:'tbd',
-        altText: 'image alt text here',
-        repo: 'https://github.com/Cjmoye30/Coding_Quiz',
-        site: 'https://cjmoye30.github.io/Coding_Quiz/'
-    },
-    {
-        title: 'Personal Portfolio',
-        description: 'Personal portfolio to showcase my latest work.',
-        languages: 'JavaScript, HTML, CSS, Bootstrap',
-        imageURL:'tbd',
-        altText: 'image alt text here',
-        repo: 'https://github.com/Cjmoye30/Personal_Portfolio',
-        site: 'https://cjmoye30.github.io/Personal_Portfolio/'
-    }
+    // {
+    //     title: 'RecipeHub',
+    //     description: 'Get or search for a recipe',
+    //     languages: 'JavaScript, HTML, CSS, Bulma',
+    //     altText: 'image alt text here',
+    //     repo: 'https://github.com/Cjmoye30/Recipe_Hub',
+    //     site: 'https://cjmoye30.github.io/Recipe_Hub/'
+    // },
+    // {
+    //     title: 'TechBlog',
+    //     description: 'Login or Signup to create, comment, and view tech related blogposts',
+    //     languages: 'ExpressJS, Sequelize, JQuery, HandlebarsJS',
+    //     imageURL:'tbd',
+    //     altText: 'image alt text here',
+    //     repo: 'https://github.com/Cjmoye30/TechBlog',
+    //     site: 'https://peaceful-oasis-37638.herokuapp.com/'
+    // },
+    // {
+    //     title: 'Simon Game',
+    //     description: 'User attempts to remember a randomly genereated sequence with increasing difficulty',
+    //     languages: 'JavaScript, HTML, CSS',
+    //     imageURL:'tbd',
+    //     altText: 'image alt text here',
+    //     repo: 'https://github.com/Cjmoye30/Simon_Game',
+    //     site: 'https://cjmoye30.github.io/Simon_Game/'
+    // },
+    // {
+    //     title: 'Coding Quiz',
+    //     description: 'Series of 10 coding related questions with a time limit',
+    //     languages: 'JavaScript, HTML, CSS',
+    //     imageURL:'tbd',
+    //     altText: 'image alt text here',
+    //     repo: 'https://github.com/Cjmoye30/Coding_Quiz',
+    //     site: 'https://cjmoye30.github.io/Coding_Quiz/'
+    // },
+    // {
+    //     title: 'Personal Portfolio',
+    //     description: 'Personal portfolio to showcase my latest work.',
+    //     languages: 'JavaScript, HTML, CSS, Bootstrap',
+    //     imageURL:'tbd',
+    //     altText: 'image alt text here',
+    //     repo: 'https://github.com/Cjmoye30/Personal_Portfolio',
+    //     site: 'https://cjmoye30.github.io/Personal_Portfolio/'
+    // }
 ];
 
 export default projects;

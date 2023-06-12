@@ -4,6 +4,10 @@ import React from 'react';
 // Import CSS to use pseudo elements
 import '../styles/Projects.css';
 
+// import all images i'm going to need
+// import DreamerGPT from '../assets/images/DreamerGPT.png'
+// import RecipeHub from '../assets/images/RecipeHub.png'
+
 function Projects({ projects }) {
   // TODO: Add a style attribute to `section`
   return (
@@ -17,7 +21,9 @@ function Projects({ projects }) {
       {projects.map((project) => (
         <div className={project.main}>
           <h1>{project.title}</h1>
-          <img src={project.imageURL} alt={project.altText} />
+
+          <img src={require(`../assets/images/${project.title}.png`)}/>
+
           <p>{project.description}</p>
           <div className='projectLinks'>
             <a target='_blank' href={project.repo}>Repo</a>
@@ -25,7 +31,7 @@ function Projects({ projects }) {
           </div>
         </div>
       ))}
-      
+
     </section>
   );
 }

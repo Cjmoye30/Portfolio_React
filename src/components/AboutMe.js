@@ -13,7 +13,7 @@ export default function AboutMe({ bio }) {
 
             {bio.map((data) => (
                 <div className="about-me-wrapper">
-                    <img src={data.avatar} alt="avatar" />
+                    {/* <img src={data.avatar} alt="avatar" /> */}
 
                     <div className="pillars">
                         {data.pillars.map((pillar) => (
