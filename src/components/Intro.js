@@ -1,6 +1,8 @@
 import React from 'react';
-// Here we import the Header.css file to grant access to some additional classNames
 import '../styles/Header.css';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 // import logo image for header
 import logo from '../assets/images/logo.svg'
@@ -9,60 +11,43 @@ import logo from '../assets/images/logo.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocation } from '@fortawesome/free-solid-svg-icons'
 
-// TODO: Create a styles object called "styles"
 const styles = {
 
-  headerSection: {
+  introContainer: {
     minHeight: '100vh',
-    width: '100%',
     display: 'flex',
-    justifyContent: 'space-between',
+    flexDirection: 'column',
+    justifyContent: 'center',
     alignItems: 'center'
   },
 
   logoMain: {
-    height: '300px'
+    height: '10rem'
   },
-
-  logo: {
-    height: '100px',
-  },
-
-  navGroup: {
-    display: 'flex',
-    flexDirection: 'column',
-    minHeight: '100vh',
-    alignItems: 'center',
-    justifyContent: 'space-evenly',
-  },
-
-  introCenter: {
-    textAlign: 'center'
-  }
 
 }
 
-const coffeeIcon = <FontAwesomeIcon icon={faLocation} pulse />
+const locationIcon = <FontAwesomeIcon icon={faLocation} pulse />
 
 
 function Intro() {
   // TODO: Add a style attribute to header and the h1 element
 
   return (
-    <header className="header" >
-      <div className="header-content row" style={styles.headerSection}>
 
-        <div style={styles.introCenter}>
+    <Container fluid>
+      <Row>
+        <Col style={styles.introContainer} lg={12}>
           <img style={styles.logoMain} src={logo} alt='logo' />
           <h1 className="logo-subtitle">Cambric Moye</h1>
           <h3>Full-Stack Web Developer</h3>
-          <h5> {coffeeIcon} Charlotte, NC</h5>
+          <h5> {locationIcon} Charlotte, NC</h5>
 
-        </div>
+        </Col>
+      </Row>
 
-      </div>
+    </Container>
 
-    </header>
   );
 }
 

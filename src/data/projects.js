@@ -4,7 +4,7 @@
 // main project/centerpiece should always be at index 0
 
 const projects = [
-    // ------------ main project ------------
+    // ------------ Main project ------------
     {
         title: 'DreamerGPT',
         imageURL: require('../assets/images/DreamerGPT.png'),
@@ -13,7 +13,6 @@ const projects = [
         altText: 'image alt text here',
         repo: 'https://github.com/Cjmoye30/Dream_Catcher',
         site: 'https://protected-hamlet-16560.herokuapp.com/',
-        class: "col"
     },
 
     // ------------ Other projects ------------
@@ -25,7 +24,6 @@ const projects = [
         altText: 'image alt text here',
         repo: 'https://github.com/Cjmoye30/Dream_Catcher',
         site: 'https://protected-hamlet-16560.herokuapp.com/',
-        class: 'col'
     },
     {
         title: 'RecipeHub',
@@ -35,8 +33,6 @@ const projects = [
         altText: 'image alt text here',
         repo: 'https://github.com/Cjmoye30/Dream_Catcher',
         site: 'https://protected-hamlet-16560.herokuapp.com/',
-        class: 'col'
-
     },
     {
         title: 'Simon Game',
@@ -46,8 +42,6 @@ const projects = [
         altText: 'image alt text here',
         repo: 'https://github.com/Cjmoye30/Dream_Catcher',
         site: 'https://protected-hamlet-16560.herokuapp.com/',
-        class: 'col'
-
     },
     {
         title: 'Coding Quiz',
@@ -57,8 +51,6 @@ const projects = [
         altText: 'image alt text here',
         repo: 'https://github.com/Cjmoye30/Dream_Catcher',
         site: 'https://protected-hamlet-16560.herokuapp.com/',
-        class: 'col'
-
     },
     {
         title: 'Personal Portfolio',
@@ -68,8 +60,6 @@ const projects = [
         altText: 'image alt text here',
         repo: 'https://github.com/Cjmoye30/Dream_Catcher',
         site: 'https://protected-hamlet-16560.herokuapp.com/',
-        class: 'col'
-
     },
 ];
 
