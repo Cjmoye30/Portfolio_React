@@ -1,11 +1,16 @@
 import React from 'react';
-import '../styles/Header.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
 
-// import logo image for header
+// Image imports
 import logo from '../assets/images/logo.svg'
+import avatar from '../assets/images/avatar.png'
+import codingIcon from '../assets/images/coding.svg'
+import baseballIcon from '../assets/images/baseball-field.svg'
+import chefIcon from '../assets/images/chef-hat.svg'
+import supplyChainIcon from '../assets/images/supply-chain.svg'
 
 // Importing icons for use:
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -18,32 +23,106 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    textAlign: 'center'
+  },
+
+  introImageWrapper: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    border: 'solid 1px'
   },
 
   logoMain: {
     height: '10rem'
   },
 
+  avatar: {
+    maxHeight: '375px',
+    width: 'auto'
+  },
+
+  miniCardWrapper: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center'
+  },
+
+  miniCard: {
+    display: 'flex',
+    minHeight: '150px',
+    alignItems: 'center',
+    justifyContent: 'center',
+    wordWrap: 'wrap'
+  },
+
+  button: {
+    maxWidth: '300px',
+    padding: '20px',
+    margin: '20px auto'
+  },
+
+  bioIcon: {
+    position: 'absolute',
+    maxHeight: '100px',
+    width: 'auto',
+    opacity: '.2'
+  }
+
 }
 
-const locationIcon = <FontAwesomeIcon icon={faLocation} pulse />
+const locationIcon = <FontAwesomeIcon icon={faLocation} bounce />
 
 
 function Intro() {
-  // TODO: Add a style attribute to header and the h1 element
 
   return (
 
     <Container fluid>
-      <Row>
-        <Col style={styles.introContainer} lg={12}>
-          <img style={styles.logoMain} src={logo} alt='logo' />
+      <Row style={styles.introContainer} >
+        <Col lg={12}>
+          <div style={styles.introImageWrapper}>
+            {/* <img style={styles.logoMain} src={logo} alt='logo' /> */}
+            <img style={styles.avatar} src={avatar} />
+
+          </div>
           <h1 className="logo-subtitle">Cambric Moye</h1>
           <h3>Full-Stack Web Developer</h3>
           <h5> {locationIcon} Charlotte, NC</h5>
 
         </Col>
+
+        <Row>
+
+          <Col className='card-fsDev' style={styles.miniCard} sm={3} xs={12}>
+            <h5>Full Stack Web Developer</h5>
+            <img style={styles.bioIcon} src={codingIcon} />
+          </Col>
+
+          <Col className='card-fsDev' style={styles.miniCard} sm={3} xs={12}>
+            <h5>Supply Chain Professional</h5>
+            <img style={styles.bioIcon} src={supplyChainIcon} />
+          </Col>
+
+          <Col className='card-fsDev' style={styles.miniCard} sm={3} xs={12}>
+            <h5>Former Professional Baseball Player</h5>
+            <img style={styles.bioIcon} src={baseballIcon} />
+          </Col>
+
+          <Col className='card-fsDev' style={styles.miniCard} sm={3} xs={12}>
+            <h5>Self-Proclaimed Chef</h5>
+            <img style={styles.bioIcon} src={chefIcon} />
+          </Col>
+
+        </Row>
+        <Button style={styles.button} variant="outline-dark">More About Me </Button>
+
+
+
+
       </Row>
 
     </Container>
