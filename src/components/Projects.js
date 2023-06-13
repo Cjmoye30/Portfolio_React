@@ -1,7 +1,6 @@
 import React from 'react';
-// Here we import the Section.css file to grant access to some additional classNames
-
-// Import CSS to use pseudo elements
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import '../styles/Projects.css';
 
 // inline styling
@@ -41,7 +40,7 @@ function Projects({ projects }) {
       <div className='row project-row projects-row-secondary'>
         {projects.slice(1).map((project) => (
           // add in outer col to add natural spacing to each of the projects
-          <div className='project-card col col-lg-6'>
+          <div className='project-card col col-lg-5 m-3'>
             <div className={project.class}>
               <img style={styles.projectImage} src={project.imageURL} />
 

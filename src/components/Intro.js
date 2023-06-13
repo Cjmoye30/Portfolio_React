@@ -5,6 +5,10 @@ import '../styles/Header.css';
 // import logo image for header
 import logo from '../assets/images/logo.svg'
 
+// Importing icons for use:
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLocation } from '@fortawesome/free-solid-svg-icons'
+
 // TODO: Create a styles object called "styles"
 const styles = {
 
@@ -38,6 +42,9 @@ const styles = {
 
 }
 
+const coffeeIcon = <FontAwesomeIcon icon={faLocation} pulse />
+
+
 function Intro() {
   // TODO: Add a style attribute to header and the h1 element
 
@@ -49,6 +56,8 @@ function Intro() {
           <img style={styles.logoMain} src={logo} alt='logo' />
           <h1 className="logo-subtitle">Cambric Moye</h1>
           <h3>Full-Stack Web Developer</h3>
+          <h5> {coffeeIcon} Charlotte, NC</h5>
+
         </div>
 
       </div>
