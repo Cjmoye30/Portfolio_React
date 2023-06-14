@@ -37,15 +37,15 @@ export default function Header() {
                     </Nav.Item>
 
                     <Nav.Item>
-                        <Nav.Link href='#projects' eventKey="link-1">My Work</Nav.Link>
+                        <Nav.Link href='/projects' eventKey="link-1">My Work</Nav.Link>
                     </Nav.Item>
 
                     <Nav.Item>
-                        <Nav.Link href='#contactMe' eventKey="link-2">Contact Me</Nav.Link>
+                        <Nav.Link href='/contact' eventKey="link-2">Contact Me</Nav.Link>
                     </Nav.Item>
 
                     <Nav.Item>
-                        <Nav.Link eventKey="link-3">Resume</Nav.Link>
+                        <Nav.Link href='/resume' eventKey="link-3">Resume</Nav.Link>
                     </Nav.Item>
 
                 </Nav>

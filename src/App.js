@@ -1,16 +1,13 @@
-import React from "react";
-import Intro from "./components/Intro";
-import Projects from "./components/Projects";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from "./components/Header";
-import AboutMe from "./components/AboutMe";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
-// import pages
+// Import pages
 import Home from './pages/home'
 import About from './pages/about'
+import Projects from './pages/projects'
+import Contact from './pages/contact'
+import Resume from './pages/resume'
 
 // importing data for my projects
 import projects from './data/projects'
@@ -35,6 +32,9 @@ function App() {
 
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About bio={bio} />} />
+        <Route path="/projects" element={<Projects projects={projects} />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/resume" element={<Resume />} />
 
       </Routes>
 

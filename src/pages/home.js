@@ -5,7 +5,6 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 
 // Image imports
-import logo from '../assets/images/logo.svg'
 import avatar from '../assets/images/avatar.png'
 import codingIcon from '../assets/images/coding.svg'
 import baseballIcon from '../assets/images/baseball-field.svg'
@@ -15,7 +14,7 @@ import supplyChainIcon from '../assets/images/supply-chain.svg'
 // Importing icons for use:
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
-import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 const styles = {
 
@@ -80,7 +79,7 @@ const styles = {
 }
 
 const locationIcon = <FontAwesomeIcon icon={faLocationDot}  />
-const arrowDown = <FontAwesomeIcon icon={faArrowDown} bounce size="xl" />
+const arrowDown = <FontAwesomeIcon icon={faArrowRight} beat size="xl" />
 
 function Intro() {
 
