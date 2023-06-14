@@ -29,7 +29,11 @@ export default function Header() {
             <div>
                 <Nav variant="tabs" defaultActiveKey="/home">
                     <Nav.Item>
-                        <Nav.Link href="#home">Home</Nav.Link>
+                        <Nav.Link href="/">Home</Nav.Link>
+                    </Nav.Item>
+
+                    <Nav.Item>
+                        <Nav.Link href="/about">About Me</Nav.Link>
                     </Nav.Item>
 
                     <Nav.Item>
@@ -48,8 +52,5 @@ export default function Header() {
             </div>
         </section>
 
-
-
     )
-
 }
