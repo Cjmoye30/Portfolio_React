@@ -2,4 +2,14 @@
     border: 1px solid black;
 }
 
+.navGroup {
+    padding: 10px;
+    background-color: red;
+}
+
+.navGroup a {
+    padding: 20px;
+    background-color: yellow;
+    text-decoration: none;
+}
 

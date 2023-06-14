@@ -9,39 +9,34 @@ import Projects from './pages/projects'
 import Contact from './pages/contact'
 import Resume from './pages/resume'
 
-// importing data for my projects
+// Import Data
 import projects from './data/projects'
 import bio from './data/bio.js'
 
+const styles = {
+  height: {
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: '100vh'
+  }
+}
+
 function App() {
   return (
-    // <div>
-    //   <Header />
-    //   <Intro />
-    //   <Projects projects={projects} />
-    //   <AboutMe bio={bio} />
-    //   <Contact />
-    //   <Footer />
-
-    // </div>
-
     <Router>
       <Header />
+      <div style={styles.height}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About bio={bio} />} />
+          <Route path="/projects" element={<Projects projects={projects} />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/resume" element={<Resume />} />
+        </Routes>
 
-      <Routes>
-
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About bio={bio} />} />
-        <Route path="/projects" element={<Projects projects={projects} />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/resume" element={<Resume />} />
-
-      </Routes>
-
+      </div>
       <Footer />
-
     </Router>
-
   );
 }
 

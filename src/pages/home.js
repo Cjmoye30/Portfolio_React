@@ -122,7 +122,7 @@ function Intro() {
           </Col>
 
         </Row>
-        <Button style={styles.button} variant="outline-dark"> <h5>More About Me</h5> {arrowDown} </Button>
+        <Button href='/about' style={styles.button} variant="outline-dark"> <h5>More About Me</h5> {arrowDown} </Button>
 
       </Row>
 

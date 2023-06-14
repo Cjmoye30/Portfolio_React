@@ -1,54 +1,120 @@
 import Nav from 'react-bootstrap/Nav';
+import { useState } from 'react';
+import { NavLink } from "react-router-dom";
 
 // import logo
 import logo from '../assets/images/cm logo 2.svg'
 
-const styles = {
+import '../styles/Header.css'
 
+const styles = {
     header: {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
         flexWrap: 'wrap',
     },
-
     headerLogo: {
         height: '100px',
         width: 'auto'
+    },
+    navGroup: {
+        display: 'flex'
+    },
+    navItem: {
+        padding: '10px'
     }
+
 
 }
 
 export default function Header() {
+
+
+    // implement state so that the active header link is highlighed toa
+
+
+
     return (
-        <section style={styles.header}  id='header' className='header'>
+        <section style={styles.header} id='header' className='header'>
             <div>
-                <img style={styles.headerLogo} src={logo}/>
+                <img style={styles.headerLogo} src={logo} />
                 <h1>Portfolio</h1>
             </div>
-            <div>
-                <Nav variant="tabs" defaultActiveKey="/home">
-                    <Nav.Item>
-                        <Nav.Link href="/">Home</Nav.Link>
-                    </Nav.Item>
+            <div className='navGroup' style={styles.navGroup}>
+                <NavLink
+                    to='/'
+                    className={({ isActive, isPending }) =>
+                        isPending ? "pending" : isActive ? "active" : ""
+                    }
+                    style={({ isActive, isPending },) => {
+                        return {
+                            fontWeight: isActive ? "bold" : "",
+                            color: isPending ? "red" : "black",
+                        };
+                    }}
+                >Home
+                </NavLink>
 
-                    <Nav.Item>
-                        <Nav.Link href="/about">About Me</Nav.Link>
-                    </Nav.Item>
+                <NavLink
+                    to='/about'
+                    className={({ isActive, isPending }) =>
+                        isPending ? "pending" : isActive ? "active" : ""
+                    }
 
-                    <Nav.Item>
-                        <Nav.Link href='/projects' eventKey="link-1">My Work</Nav.Link>
-                    </Nav.Item>
+                    style={({ isActive, isPending }) => {
+                        return {
+                            fontWeight: isActive ? "bold" : "",
+                            color: isPending ? "red" : "black",
+                        };
+                    }}
+                >About
+                </NavLink>
 
-                    <Nav.Item>
-                        <Nav.Link href='/contact' eventKey="link-2">Contact Me</Nav.Link>
-                    </Nav.Item>
+                <NavLink
+                    to='/projects'
+                    className={({ isActive, isPending }) =>
+                        isPending ? "pending" : isActive ? "active" : ""
+                    }
 
-                    <Nav.Item>
-                        <Nav.Link href='/resume' eventKey="link-3">Resume</Nav.Link>
-                    </Nav.Item>
+                    style={({ isActive, isPending }) => {
+                        return {
+                            fontWeight: isActive ? "bold" : "",
+                            color: isPending ? "red" : "black",
+                        };
+                    }}
+                >My Work
+                </NavLink>
 
-                </Nav>
+                <NavLink
+                    to='/contact'
+                    className={({ isActive, isPending }) =>
+                        isPending ? "pending" : isActive ? "active" : ""
+                    }
+
+                    style={({ isActive, isPending }) => {
+                        return {
+                            fontWeight: isActive ? "bold" : "",
+                            color: isPending ? "red" : "black",
+                        };
+                    }}
+                >Contact
+                </NavLink>
+
+                <NavLink
+                    to='/resume'
+                    className={({ isActive, isPending }) =>
+                        isPending ? "pending" : isActive ? "active" : ""
+                    }
+
+                    style={({ isActive, isPending }) => {
+                        return {
+                            fontWeight: isActive ? "bold" : "",
+                            color: isPending ? "red" : "black",
+                        };
+                    }}
+                >Resume
+                </NavLink>
             </div>
         </section>
 
