@@ -1,7 +1,7 @@
 import Nav from 'react-bootstrap/Nav';
 
 // import logo
-import logo from '../assets/images/logo.svg'
+import logo from '../assets/images/cm logo 2.svg'
 
 const styles = {
 
@@ -13,7 +13,7 @@ const styles = {
     },
 
     headerLogo: {
-        height: '75px',
+        height: '100px',
         width: 'auto'
     }
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import Stack from 'react-bootstrap/Stack';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -22,13 +21,18 @@ const styles = {
 
   row: {
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    padding: '10px'
   },
 
   projectImage: {
     width: '100%',
     height: 'auto'
   },
+
+  projectCard: {
+    padding: '0'
+  }
 }
 
 function Projects({ projects }) {
@@ -44,7 +48,7 @@ function Projects({ projects }) {
       {/* finding the first item in the projects array */}
       <Container fluid>
         <Row style={styles.row}>
-          <Col style={styles.testBG} lg={8} className='project-card'>
+          <Col style={styles.testBG} xl={8} className='project-card'>
             <img style={styles.projectImage} src={projects[0].imageURL} />
 
             <div className='project-overlay'>
@@ -63,7 +67,7 @@ function Projects({ projects }) {
           <Stack style={styles.testAlign} direction='horizontal' gap={3}>
             {projects.slice(1).map((project) => (
               // add in outer col to add natural spacing to each of the projects
-              <Col lg={5} md={12} className='project-card'>
+              <Col xl={5} md={11} className='project-card'>
                 <div>
                   <img style={styles.projectImage} src={project.imageURL} />
 

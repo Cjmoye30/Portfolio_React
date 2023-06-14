@@ -14,7 +14,10 @@ import supplyChainIcon from '../assets/images/supply-chain.svg'
 
 // Importing icons for use:
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLocation } from '@fortawesome/free-solid-svg-icons'
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
+
+
 
 const styles = {
 
@@ -60,9 +63,13 @@ const styles = {
   },
 
   button: {
-    maxWidth: '300px',
+    maxWidth: '250px',
     padding: '20px',
-    margin: '20px auto'
+    margin: '20px auto',
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    flexWrap: 'no-wrap'
+
   },
 
   bioIcon: {
@@ -74,8 +81,8 @@ const styles = {
 
 }
 
-const locationIcon = <FontAwesomeIcon icon={faLocation} bounce />
-
+const locationIcon = <FontAwesomeIcon icon={faLocationDot}  />
+const arrowDown = <FontAwesomeIcon icon={faArrowDown} bounce size="xl" />
 
 function Intro() {
 
@@ -83,7 +90,7 @@ function Intro() {
 
     <Container fluid>
       <Row style={styles.introContainer} >
-        <Col lg={12}>
+        <Col lg={6}>
           <div style={styles.introImageWrapper}>
             {/* <img style={styles.logoMain} src={logo} alt='logo' /> */}
             <img style={styles.avatar} src={avatar} />
@@ -118,8 +125,7 @@ function Intro() {
           </Col>
 
         </Row>
-        <Button style={styles.button} variant="outline-dark">More About Me </Button>
-
+        <Button style={styles.button} variant="outline-dark"> <h5>More About Me</h5> {arrowDown} </Button>
 
 
 
