@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { NavLink } from "react-router-dom";
 
 // import logo
-import logo from '../assets/images/cm logo 2.svg'
+import logo from '../assets/images/logo4.svg'
 
 import '../styles/Header.css'
 
@@ -15,31 +15,18 @@ const styles = {
         flexWrap: 'wrap',
     },
     headerLogo: {
-        height: '100px',
+        height: '150px',
         width: 'auto'
     },
-    navGroup: {
-        display: 'flex'
-    },
-    navItem: {
-        padding: '10px'
-    }
-
 
 }
 
 export default function Header() {
 
-
-    // implement state so that the active header link is highlighed toa
-
-
-
     return (
         <section style={styles.header} id='header' className='header'>
             <div>
                 <img style={styles.headerLogo} src={logo} />
-                <h1>Portfolio</h1>
             </div>
             <div className='navGroup' style={styles.navGroup}>
                 <NavLink

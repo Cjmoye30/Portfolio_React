@@ -3,6 +3,7 @@
 }
 
 .navGroup {
+    display: flex;
     padding: 10px;
     background-color: red;
 }
@@ -11,5 +12,6 @@
     padding: 20px;
     background-color: yellow;
     text-decoration: none;
+    object-fit: contain;
 }
 
