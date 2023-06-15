@@ -132,11 +132,7 @@ export default function AboutMe({ bio }) {
                 </Col>
                 <Col style={styles.iconCol} sm={2}> <img style={styles.languageIcon} src={jsIcon} />
                 </Col>
-
             </Row>
-
         </Container>
-
-
     )
 }

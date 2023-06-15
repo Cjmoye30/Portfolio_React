@@ -1,17 +1,47 @@
-* {
-    border: 1px solid black;
+/* ------------------ Header / Navbar ------------------ */
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: var(--b1);
+    padding: 20px;
+}
+
+.active {
+    background-color: var(--b3)
 }
 
 .navGroup {
     display: flex;
-    padding: 10px;
-    background-color: red;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .navGroup a {
-    padding: 20px;
-    background-color: yellow;
     text-decoration: none;
     object-fit: contain;
+    color: var(--b2);
+    border-bottom: 1px solid var(--b6);
+    border-radius: 5px;
+    padding: 5px 30px;
+    margin: 5px 10px;
+}
+
+/* Pseudo elements */
+@media screen and (max-width: 768px) {
+    .header {
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .navGroup a {
+        width: 100%;
+        text-align: center;
+        padding: 5px;
+    }
 }
 

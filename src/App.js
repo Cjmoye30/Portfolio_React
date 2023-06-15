@@ -13,6 +13,8 @@ import Resume from './pages/resume'
 import projects from './data/projects'
 import bio from './data/bio.js'
 
+import './styles/styles.css'
+
 const styles = {
   height: {
     display: 'flex',

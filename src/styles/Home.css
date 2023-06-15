@@ -1,0 +1,17 @@
+.homeAvatar {
+    opacity: .8;
+    padding: 20px;
+}
+
+.homeAvatar img {
+    border-radius: 30%;
+    background-color: var(--b1);
+}
+
+.logo-subtitle {
+    padding: 30px;
+}
+
+.miniCard {
+    background-color: red;
+}

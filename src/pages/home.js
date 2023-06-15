@@ -4,6 +4,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 
+// Css
+import '../styles/Home.css'
+
 // Image imports
 import avatar from '../assets/images/avatar.png'
 import codingIcon from '../assets/images/coding.svg'
@@ -17,7 +20,6 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 const styles = {
-
   introContainer: {
     minHeight: '100vh',
     display: 'flex',
@@ -32,7 +34,6 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     flexWrap: 'wrap',
-    border: 'solid 1px'
   },
 
   logoMain: {
@@ -40,7 +41,7 @@ const styles = {
   },
 
   avatar: {
-    maxHeight: '375px',
+    maxHeight: '370px',
     width: 'auto'
   },
 
@@ -56,7 +57,7 @@ const styles = {
     minHeight: '150px',
     alignItems: 'center',
     justifyContent: 'center',
-    wordWrap: 'wrap'
+    wordWrap: 'wrap',
   },
 
   button: {
@@ -66,7 +67,6 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-evenly',
     flexWrap: 'no-wrap'
-
   },
 
   bioIcon: {
@@ -78,7 +78,7 @@ const styles = {
 
 }
 
-const locationIcon = <FontAwesomeIcon icon={faLocationDot}  />
+const locationIcon = <FontAwesomeIcon icon={faLocationDot} />
 const arrowDown = <FontAwesomeIcon icon={faArrowRight} beat size="xl" />
 
 function Intro() {
@@ -87,36 +87,41 @@ function Intro() {
 
     <Container fluid>
       <Row style={styles.introContainer} >
-        <Col lg={6}>
-          <div style={styles.introImageWrapper}>
-            {/* <img style={styles.logoMain} src={logo} alt='logo' /> */}
+        <Col lg={5}>
+          <div className='homeAvatar' style={styles.introImageWrapper}>
             <img style={styles.avatar} src={avatar} />
 
           </div>
-          <h1 className="logo-subtitle">Cambric Moye</h1>
-          <h3>Full-Stack Web Developer</h3>
-          <h5> {locationIcon} Charlotte, NC</h5>
+
+          <div className="logo-subtitle">
+            <h1 >Cambric Moye</h1>
+            <h3>Full-Stack Web Developer</h3>
+            <h5> {locationIcon} Charlotte, NC</h5>
+
+          </div>
 
         </Col>
 
+        <hr />
+
         <Row>
 
-          <Col className='card-fsDev' style={styles.miniCard} sm={3} xs={12}>
+          <Col className='card' style={styles.miniCard} sm={3} xs={12}>
             <h5>Full Stack Web Developer</h5>
             <img style={styles.bioIcon} src={codingIcon} />
           </Col>
 
-          <Col className='card-fsDev' style={styles.miniCard} sm={3} xs={12}>
+          <Col className='card' style={styles.miniCard} sm={3} xs={12}>
             <h5>Supply Chain Professional</h5>
             <img style={styles.bioIcon} src={supplyChainIcon} />
           </Col>
 
-          <Col className='card-fsDev' style={styles.miniCard} sm={3} xs={12}>
+          <Col className='card' style={styles.miniCard} sm={3} xs={12}>
             <h5>Former Professional Baseball Player</h5>
             <img style={styles.bioIcon} src={baseballIcon} />
           </Col>
 
-          <Col className='card-fsDev' style={styles.miniCard} sm={3} xs={12}>
+          <Col className='card' style={styles.miniCard} sm={3} xs={12}>
             <h5>Self-Proclaimed Chef</h5>
             <img style={styles.bioIcon} src={chefIcon} />
           </Col>

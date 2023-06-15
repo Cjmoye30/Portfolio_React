@@ -1,0 +1,25 @@
+/* Color Palette */
+/* * {
+    border: 1px solid black;
+} */
+
+:root {
+    /* https://coolors.co/palette/353535-3c6e71-ffffff-d9d9d9-284b63 */
+    --a1: #353535; /* Header, Footer, Section Headers Background Color */
+    --a2: #d9d9d9; /* Header, Footer, Section Header Text Color*/
+    --a3: #3c6e71; /* Body Text Color */
+    --a4: #3c6e71; /* Sub-header Background */
+    --a5: #284b63; /* 2nd Sub-header Background */
+    --a6: #ffffff; /* base white */
+    
+    /* https://coolors.co/palette/031926-468189-77aca2-9dbebb-f4e9cd*/
+    --b1: #031926; /* Header, Footer, Section Headers Background Color */
+    --b2: #F4E9CD; /* Header, Footer, Section Header Text Color*/
+    --b3: #468189; /* Body Text Color */
+    --b4: #77ACA2; /* Sub-header Background */
+    --b5: #9DBEBB; /* 2nd Sub-header Background */
+    --b6: #F4E9CD; /* base white */
+}
+
+
+

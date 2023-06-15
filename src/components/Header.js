@@ -1,9 +1,7 @@
-import Nav from 'react-bootstrap/Nav';
-import { useState } from 'react';
 import { NavLink } from "react-router-dom";
 
 // import logo
-import logo from '../assets/images/logo4.svg'
+import logo from '../assets/images/logoMain.svg'
 
 import '../styles/Header.css'
 
@@ -14,32 +12,28 @@ const styles = {
         justifyContent: 'space-between',
         flexWrap: 'wrap',
     },
-    headerLogo: {
-        height: '150px',
+    logo: {
+        maxHeight: '100px',
         width: 'auto'
-    },
-
+    }
 }
 
 export default function Header() {
 
     return (
-        <section style={styles.header} id='header' className='header'>
+        <section id='header' className='header'>
+
             <div>
-                <img style={styles.headerLogo} src={logo} />
+                <img style={styles.logo} src={logo} />
+                <h2></h2>
             </div>
+
             <div className='navGroup' style={styles.navGroup}>
                 <NavLink
                     to='/'
                     className={({ isActive, isPending }) =>
                         isPending ? "pending" : isActive ? "active" : ""
                     }
-                    style={({ isActive, isPending },) => {
-                        return {
-                            fontWeight: isActive ? "bold" : "",
-                            color: isPending ? "red" : "black",
-                        };
-                    }}
                 >Home
                 </NavLink>
 
@@ -48,13 +42,6 @@ export default function Header() {
                     className={({ isActive, isPending }) =>
                         isPending ? "pending" : isActive ? "active" : ""
                     }
-
-                    style={({ isActive, isPending }) => {
-                        return {
-                            fontWeight: isActive ? "bold" : "",
-                            color: isPending ? "red" : "black",
-                        };
-                    }}
                 >About
                 </NavLink>
 
@@ -63,13 +50,6 @@ export default function Header() {
                     className={({ isActive, isPending }) =>
                         isPending ? "pending" : isActive ? "active" : ""
                     }
-
-                    style={({ isActive, isPending }) => {
-                        return {
-                            fontWeight: isActive ? "bold" : "",
-                            color: isPending ? "red" : "black",
-                        };
-                    }}
                 >My Work
                 </NavLink>
 
@@ -78,13 +58,6 @@ export default function Header() {
                     className={({ isActive, isPending }) =>
                         isPending ? "pending" : isActive ? "active" : ""
                     }
-
-                    style={({ isActive, isPending }) => {
-                        return {
-                            fontWeight: isActive ? "bold" : "",
-                            color: isPending ? "red" : "black",
-                        };
-                    }}
                 >Contact
                 </NavLink>
 
@@ -93,16 +66,11 @@ export default function Header() {
                     className={({ isActive, isPending }) =>
                         isPending ? "pending" : isActive ? "active" : ""
                     }
-
-                    style={({ isActive, isPending }) => {
-                        return {
-                            fontWeight: isActive ? "bold" : "",
-                            color: isPending ? "red" : "black",
-                        };
-                    }}
                 >Resume
                 </NavLink>
             </div>
+
+
         </section>
 
     )
