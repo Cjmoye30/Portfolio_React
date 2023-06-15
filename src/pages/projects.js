@@ -90,29 +90,6 @@ function Projects({ projects }) {
         </Row>
       </Container>
 
-
-      {/* <div className='row project-row projects-row-secondary'>
-        {projects.slice(1).map((project) => (
-          // add in outer col to add natural spacing to each of the projects
-          <div className='project-card col col-lg-5 m-3'>
-            <div className={project.class}>
-              <img style={styles.projectImage} src={project.imageURL} />
-
-              <div className='project-overlay'>
-                <h1>{project.title}</h1>
-                <p>{project.description}</p>
-                <div className='projectLinks'>
-                  <a target='_blank' href={project.repo}>Repo</a>
-                  <a target='_blank' href={project.site}>Site</a>
-                </div>
-
-              </div>
-
-            </div>
-          </div>
-        ))}
-      </div> */}
-
     </section>
   );
 }

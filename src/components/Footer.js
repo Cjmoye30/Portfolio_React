@@ -1,5 +1,6 @@
 import githubIcon from '../assets/images/github.svg'
 import linkedInIcon from '../assets/images/linkedin.svg'
+import '../styles/Footer.css'
 
 const styles = {
     icon: {
@@ -7,12 +8,16 @@ const styles = {
     }
 }
 
-export default function Footer () {
+export default function Footer() {
     return (
-        <section id="footer">
+        <footer>
             <p>Made with ❤️ in Charlotte, NC</p>
-            <img style={styles.icon} src={githubIcon} />         
-            <img style={styles.icon} src={linkedInIcon} />         
-        </section>
+
+            <div className='iconWrapper'>
+                <img style={styles.icon} src={githubIcon} />
+                <img style={styles.icon} src={linkedInIcon} />
+
+            </div>
+        </footer>
     )
 }

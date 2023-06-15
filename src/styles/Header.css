@@ -1,6 +1,6 @@
 /* ------------------ Header / Navbar ------------------ */
 
-.header {
+header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -30,7 +30,13 @@
     margin: 5px 10px;
 }
 
-/* Pseudo elements */
+/* Pseudo Elements */
+.navGroup a:hover {
+    background-color: var(--b3);
+    opacity: .7;
+}
+
+/* Media Queires */
 @media screen and (max-width: 768px) {
     .header {
         align-items: center;

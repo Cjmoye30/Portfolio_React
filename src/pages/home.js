@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
+import Stack from 'react-bootstrap/Stack';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
@@ -63,9 +64,10 @@ const styles = {
   button: {
     maxWidth: '250px',
     padding: '20px',
-    margin: '20px auto',
+    margin: '50px auto',
     display: 'flex',
     justifyContent: 'space-evenly',
+    alignItems: 'center',
     flexWrap: 'no-wrap'
   },
 
@@ -90,7 +92,6 @@ function Intro() {
         <Col lg={5}>
           <div className='homeAvatar' style={styles.introImageWrapper}>
             <img style={styles.avatar} src={avatar} />
-
           </div>
 
           <div className="logo-subtitle">
@@ -99,35 +100,40 @@ function Intro() {
             <h5> {locationIcon} Charlotte, NC</h5>
 
           </div>
-
         </Col>
-
-        <hr />
 
         <Row>
 
-          <Col className='card' style={styles.miniCard} sm={3} xs={12}>
-            <h5>Full Stack Web Developer</h5>
-            <img style={styles.bioIcon} src={codingIcon} />
+          <Col className='outerCard' sm={3} xs={12}>
+            <Col className='card' style={styles.miniCard} >
+              <h5>Full Stack Web Developer</h5>
+              <img style={styles.bioIcon} src={codingIcon} />
+            </Col>
           </Col>
 
-          <Col className='card' style={styles.miniCard} sm={3} xs={12}>
-            <h5>Supply Chain Professional</h5>
-            <img style={styles.bioIcon} src={supplyChainIcon} />
+          <Col className='outerCard' sm={3} xs={12}>
+            <Col className='card' style={styles.miniCard}>
+              <h5>Supply Chain Professional</h5>
+              <img style={styles.bioIcon} src={supplyChainIcon} />
+            </Col>
           </Col>
 
-          <Col className='card' style={styles.miniCard} sm={3} xs={12}>
-            <h5>Former Professional Baseball Player</h5>
-            <img style={styles.bioIcon} src={baseballIcon} />
+          <Col className='outerCard' sm={3} xs={12}>
+            <Col className='card' style={styles.miniCard}>
+              <h5>Former Professional Baseball Player</h5>
+              <img style={styles.bioIcon} src={baseballIcon} />
+            </Col>
           </Col>
 
-          <Col className='card' style={styles.miniCard} sm={3} xs={12}>
-            <h5>Self-Proclaimed Chef</h5>
-            <img style={styles.bioIcon} src={chefIcon} />
+          <Col className='outerCard' sm={3} xs={12}>
+            <Col className='card' style={styles.miniCard}>
+              <h5>Self-Proclaimed Chef</h5>
+              <img style={styles.bioIcon} src={chefIcon} />
+            </Col>
           </Col>
 
         </Row>
-        <Button href='/about' style={styles.button} variant="outline-dark"> <h5>More About Me</h5> {arrowDown} </Button>
+        <Button className='aboutMeButton' href='/about' style={styles.button}> <h5>More About Me</h5> {arrowDown} </Button>
 
       </Row>
 

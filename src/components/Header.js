@@ -21,8 +21,8 @@ const styles = {
 export default function Header() {
 
     return (
-        <section id='header' className='header'>
 
+        <header>
             <div>
                 <img style={styles.logo} src={logo} />
                 <h2></h2>
@@ -70,8 +70,10 @@ export default function Header() {
                 </NavLink>
             </div>
 
+        </header>
 
-        </section>
+
+
 
     )
 }
