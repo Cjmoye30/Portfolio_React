@@ -1,7 +1,4 @@
 /* Style sheet to keep the pseudo elements */
-*{
-    border: 1px solid black;
-}
 
 /* main project will get additional styling */
 .project-row {
