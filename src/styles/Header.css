@@ -9,14 +9,19 @@ header {
     padding: 20px;
 }
 
+.headerRow {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .active {
     background-color: var(--b3)
 }
 
 .navGroup {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
