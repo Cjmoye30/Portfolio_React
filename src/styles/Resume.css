@@ -1,0 +1,37 @@
+.resumeSection {
+    text-align: center;
+}
+
+.resumeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+iframe {
+    text-align: center;
+    width: 100%;
+    height: 1250px;
+}
+
+.download {
+    margin: 0 auto;
+    background-color: var(--b1);
+    border: none;
+    padding: 20px 40px;
+}
+
+.download a {
+    color: var(--b2);
+    text-decoration: none;
+}
+
+
+/* Resume gets too small to actually view - need to hide */
+
+@media screen and (max-width: 768px) {
+    iframe {
+        display: none;
+    }
+
+}
