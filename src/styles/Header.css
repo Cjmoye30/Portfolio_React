@@ -1,6 +1,6 @@
 /* ------------------ Header / Navbar ------------------ */
 
-.header {
+header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -9,14 +9,19 @@
     padding: 20px;
 }
 
+.headerRow {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .active {
     background-color: var(--b3)
 }
 
 .navGroup {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -30,7 +35,13 @@
     margin: 5px 10px;
 }
 
-/* Pseudo elements */
+/* Pseudo Elements */
+.navGroup a:hover {
+    background-color: var(--b3);
+    opacity: .7;
+}
+
+/* Media Queires */
 @media screen and (max-width: 768px) {
     .header {
         align-items: center;

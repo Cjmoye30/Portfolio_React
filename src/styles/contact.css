@@ -1,0 +1,12 @@
+.contactRow {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.contactCol {
+    background-color: var(--b5);
+    padding: 20px;
+    border: 1px solid var(--b1);
+    border-radius: 10px;
+}

@@ -12,6 +12,24 @@
     padding: 30px;
 }
 
-.miniCard {
-    background-color: red;
+.outerCard {
+    margin: 5px 0;
+}
+
+.card {
+    background-color: var(--b4);
+    box-shadow: 1px 1px 4px black;
+}
+
+.aboutMeButton {
+    background-color: var(--b1);
+    color: var(--b2);
+    border: 1px solid var(--b4);
+    box-shadow: 1px 1px 4px black; 
+}
+
+.aboutMeButton:hover {
+    background-color: var(--b1);
+    opacity: .7;
+    border: 1px solid var(--b4);
 }

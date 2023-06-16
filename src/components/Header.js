@@ -1,4 +1,6 @@
 import { NavLink } from "react-router-dom";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 // import logo
 import logo from '../assets/images/logoMain.svg'
@@ -21,11 +23,11 @@ const styles = {
 export default function Header() {
 
     return (
-        <section id='header' className='header'>
 
+        <header>
+            
             <div>
                 <img style={styles.logo} src={logo} />
-                <h2></h2>
             </div>
 
             <div className='navGroup' style={styles.navGroup}>
@@ -70,8 +72,10 @@ export default function Header() {
                 </NavLink>
             </div>
 
+        </header>
 
-        </section>
+
+
 
     )
 }

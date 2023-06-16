@@ -1,6 +1,14 @@
-/* Style sheet to keep the pseudo elements */
+.sectionHeader {
+    padding: 20px ;
+}
 
-/* main project will get additional styling */
+.mainProjectRow {
+    margin-top: 20px;
+}
+.secondaryProjectRow {
+    margin-bottom: 20px;
+}
+
 .project-row {
     display: flex;
     flex-direction: row;
@@ -9,18 +17,11 @@
     align-items: center;
 }
 
-.main-project-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-}
-
 .project-card {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* border: 1px solid var(--dark1); */
+    border: 2px solid var(--b1);
     border-radius: 10px;
     overflow: hidden;
     margin: 0 auto;
@@ -39,7 +40,7 @@
     justify-content: center;
     flex-direction: column;
     position: absolute;
-    background-color: rgb(195, 195, 195);
+    background-color: var(--b5);
     color: black;
     bottom: 0;
     width: 100%;
@@ -47,7 +48,30 @@
     opacity: .9;
     animation: fadeIn .5s;
     padding: 20px;
-    border-top: .1px solid var(--light2);
+    border-top: .1px solid var(--b1);
+}
+
+.projectLinks {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.projectLinks a {
+    color: var(--b1);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 30px;
+    margin: 0 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px black;
+    background-color: var(--b1);
+    color: var(--b2);
+}
+
+.projectLinks a:hover {
+    opacity: .9;
 }
 
 @keyframes fadeIn {

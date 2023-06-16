@@ -6,7 +6,6 @@ import '../styles/Projects.css';
 
 // inline styling
 const styles = {
-
   testBG: {
     backgroundColor: 'yellow'
   },
@@ -37,83 +36,57 @@ const styles = {
 
 function Projects({ projects }) {
   return (
-    <section id='projects' className="section">
 
-      <div className='sectionHeader'>
-        <h2>My Projects</h2>
-        <h5>Some of my most recent work</h5>
-      </div>
+    <Container fluid>
+      <Row >
+        <div className='sectionHeader'>
+          <h2>My Projects</h2>
+          <h5>Some of my most recent work</h5>
+        </div>
+      </Row>
 
       {/* ------------- Main Project ------------- */}
-      {/* finding the first item in the projects array */}
-      <Container fluid>
-        <Row style={styles.row}>
-          <Col style={styles.testBG} xl={8} className='project-card'>
-            <img style={styles.projectImage} src={projects[0].imageURL} />
-
-            <div className='project-overlay'>
-              <h1>{projects[0].title}</h1>
+      <Row className='mainProjectRow' style={styles.row}>
+        <Col style={styles.testBG} xl={8} className='project-card'>
+          <img style={styles.projectImage} src={projects[0].imageURL} alt={projects[0].altText} />
+          <div className='project-overlay'>
+            <h1 className='projectTitle'>{projects[0].title}</h1>
+            <p className='projectDesc'>{projects[0].description}</p>
+            <p className='projectLanguages'>{projects[0].languages}</p>
+            <div className='projectLinks'>
+              <a target='_blank' href={projects[0].repo}>Repo</a>
+              <a target='_blank' href={projects[0].site}>Site</a>
             </div>
-          </Col>
-        </Row>
-      </Container>
+          </div>
+        </Col>
+      </Row>
 
       <hr />
 
       {/* ------------- Secondary Projects ------------- */}
-      {/* starting from the second item in the array for the rest of the projects */}
-      <Container fluid>
-        <Row style={styles.row}>
-          <Stack style={styles.testAlign} direction='horizontal' gap={3}>
-            {projects.slice(1).map((project) => (
-              // add in outer col to add natural spacing to each of the projects
-              <Col xl={5} md={11} className='project-card'>
-                <div>
-                  <img style={styles.projectImage} src={project.imageURL} />
-
-                  <div className='project-overlay'>
-                    <h1>{project.title}</h1>
-                    <p>{project.description}</p>
-                    <div className='projectLinks'>
-                      <a target='_blank' href={project.repo}>Repo</a>
-                      <a target='_blank' href={project.site}>Site</a>
-                    </div>
-
+      <Row className='secondaryProjectRow'style={styles.row}>
+        <Stack style={styles.testAlign} direction='horizontal' gap={3}>
+          {projects.slice(1).map((project) => (
+            // add in outer col to add natural spacing to each of the projects
+            <Col xl={5} md={11} className='project-card'>
+              <div>
+                <img style={styles.projectImage} src={project.imageURL} alt={projects.altText} />
+                <div className='project-overlay'>
+                  <h1>{project.title}</h1>
+                  <p>{project.description}</p>
+                  <p>{project.languages}</p>
+                  <div className='projectLinks'>
+                    <a target='_blank' href={project.repo}>Repo</a>
+                    <a target='_blank' href={project.site}>Site</a>
                   </div>
-
                 </div>
-              </Col>
-
-            ))}
-
-          </Stack>
-        </Row>
-      </Container>
-
-
-      {/* <div className='row project-row projects-row-secondary'>
-        {projects.slice(1).map((project) => (
-          // add in outer col to add natural spacing to each of the projects
-          <div className='project-card col col-lg-5 m-3'>
-            <div className={project.class}>
-              <img style={styles.projectImage} src={project.imageURL} />
-
-              <div className='project-overlay'>
-                <h1>{project.title}</h1>
-                <p>{project.description}</p>
-                <div className='projectLinks'>
-                  <a target='_blank' href={project.repo}>Repo</a>
-                  <a target='_blank' href={project.site}>Site</a>
-                </div>
-
               </div>
+            </Col>
+          ))}
+        </Stack>
+      </Row>
 
-            </div>
-          </div>
-        ))}
-      </div> */}
-
-    </section>
+    </Container>
   );
 }
 
