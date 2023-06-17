@@ -5,13 +5,7 @@ import Col from 'react-bootstrap/Col';
 
 import '../styles/AboutMe.css'
 
-// Import Icons:
-import reactIcon from '../assets/icons/react.svg'
-import bootstrapIcon from '../assets/icons/bootstrap.svg'
-import nodeIcon from '../assets/icons/node-js.svg'
-import htmlIcon from '../assets/icons/html5.svg'
-import cssIcon from '../assets/icons/css.svg'
-import jsIcon from '../assets/icons/js.svg'
+
 
 const styles = {
     avatar: {
@@ -105,26 +99,7 @@ export default function AboutMe({ bio }) {
                 ))}
             </Row>
 
-            {/* Skills Section */}
-            <Row className='languagesRow'>
-                <div style={styles.languages} className="sectionHeader">
-                    <h1>My Skills</h1>
-                    <h5>Proficient Languages and Libraries</h5>
-                </div>
 
-                <Col className='iconCol' style={styles.iconCol} sm={2}> <img style={styles.languageIcon} src={reactIcon} />
-                </Col>
-                <Col className='iconCol' style={styles.iconCol} sm={2}> <img style={styles.languageIcon} src={bootstrapIcon} />
-                </Col>
-                <Col className='iconCol' style={styles.iconCol} sm={2}> <img style={styles.languageIcon} src={nodeIcon} />
-                </Col>
-                <Col className='iconCol' style={styles.iconCol} sm={2}> <img style={styles.languageIcon} src={htmlIcon} />
-                </Col>
-                <Col className='iconCol' style={styles.iconCol} sm={2}> <img style={styles.languageIcon} src={cssIcon} />
-                </Col>
-                <Col className='iconCol' style={styles.iconCol} sm={2}> <img style={styles.languageIcon} src={jsIcon} />
-                </Col>
-            </Row>
         </Container>
     )
 }

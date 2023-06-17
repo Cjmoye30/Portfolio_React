@@ -1,27 +1,52 @@
+/* overflow-x scroll allows the iframe to not alter the page when scrolled down */
 .resumeSection {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    overflow-x: scroll;
 }
 
-.resumeContainer {
+.resumeRow {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
+.resumeCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
 iframe {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
     text-align: center;
     height: 1250px;
-    min-width: 1000px;
-    border: 1px solid black;
+    width: 1250px;
+    min-width: 760px;
+    border: 1px solid var(--b1);
+    background-color: var(--b1);
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 3px 3px 5px black;
 }
 
 .download {
     margin: 0 auto;
+    font-weight: bold;
+    font-size: 1.2rem;
     background-color: var(--b1);
     border: none;
     padding: 20px 40px;
+    margin: 20px;
+}
+
+.download:hover {
+    background-color: var(--b3);
 }
 
 .download a {
@@ -29,12 +54,24 @@ iframe {
     text-decoration: none;
 }
 
+.languagesRow {
+    padding: 0;
+}
+
+.skillBreak {
+    display: none;
+}
+
 
 /* Resume gets too small to actually view - need to hide */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 560px) {
     iframe {
-        display: none;
+        width: 800px;
+    }
+
+    .skillBreak {
+        display: block;
     }
 
 }

@@ -1,11 +1,26 @@
 import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+
+import { useState } from 'react';
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
 
 import '../styles/contact.css'
 
 export default function Contact() {
+
+    const [validated, setValidated] = useState(false);
+
+    const handleSubmit = (event) => {
+      const form = event.currentTarget;
+      if (form.checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+  
+      setValidated(true);
+    };
 
     return (
         <section id='contactMe'>
@@ -17,24 +32,27 @@ export default function Contact() {
 
             <Row className='contactRow'>
                 <Col className='contactCol' sm={10}>
-                    <Form>
-                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                    <Form noValidate validated={validated} onSubmit={handleSubmit}>
+
+                        <Form.Group  className="mb-3" controlId="contactName">
                             <Form.Label>Name</Form.Label>
-                            <Form.Control type="email" placeholder="Dragonfly Jones" />
+                            <Form.Control required type="text" placeholder="Dragonfly Jones" />
                         </Form.Group>
 
-                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                        <Form.Group className="mb-3" controlId="contactEmail">
                             <Form.Label>Email address</Form.Label>
-                            <Form.Control type="email" placeholder="dFlyDojo@gmail.com" />
+                            <Form.Control required type="email" placeholder="dFlyDojo@gmail.com" />
                         </Form.Group>
-                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+
+                        <Form.Group className="mb-3" controlId="contactMessage">
                             <Form.Label>Message</Form.Label>
-                            <Form.Control as="textarea" rows={3} />
+                            <Form.Control required as="textarea" rows={3} />
                         </Form.Group>
 
                         <Button variant="dark" type="submit">
                             Submit
                         </Button>
+
                     </Form>
 
                 </Col>
