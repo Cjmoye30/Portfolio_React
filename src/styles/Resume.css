@@ -1,5 +1,7 @@
 .resumeSection {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .resumeContainer {
@@ -10,8 +12,9 @@
 
 iframe {
     text-align: center;
-    width: 100%;
     height: 1250px;
+    min-width: 1000px;
+    border: 1px solid black;
 }
 
 .download {
