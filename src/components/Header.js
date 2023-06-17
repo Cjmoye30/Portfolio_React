@@ -8,74 +8,66 @@ import logo from '../assets/images/logoMain.svg'
 import '../styles/Header.css'
 
 const styles = {
-    header: {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        flexWrap: 'wrap',
-    },
+
     logo: {
         maxHeight: '100px',
         width: 'auto'
-    }
+    },
 }
 
 export default function Header() {
 
     return (
 
-        <header>
-            
-            <div>
-                <img style={styles.logo} src={logo} />
-            </div>
+        <Row className="header">
+            <Col md={3} className="navLogo">
+                <div>
+                    <img style={styles.logo} src={logo} />
+                </div>
 
-            <div className='navGroup' style={styles.navGroup}>
-                <NavLink
-                    to='/'
-                    className={({ isActive, isPending }) =>
-                        isPending ? "pending" : isActive ? "active" : ""
+            </Col>
+            <Col md={6} className="navCol">
+                    <NavLink
+                        to='/'
+                        className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "active navigationLink" : "navigationLink"
+                        }
+                    >Home
+                    </NavLink>
+
+                    <NavLink
+                        to='/about'
+                        className={({ isActive, isPending }) =>
+                        isPending ? "pending" : isActive ? "active navigationLink" : "navigationLink"
                     }
-                >Home
-                </NavLink>
+                    >About
+                    </NavLink>
 
-                <NavLink
-                    to='/about'
-                    className={({ isActive, isPending }) =>
-                        isPending ? "pending" : isActive ? "active" : ""
+                    <NavLink
+                        to='/projects'
+                        className={({ isActive, isPending }) =>
+                        isPending ? "pending" : isActive ? "active navigationLink" : "navigationLink"
                     }
-                >About
-                </NavLink>
+                    >Projects
+                    </NavLink>
 
-                <NavLink
-                    to='/projects'
-                    className={({ isActive, isPending }) =>
-                        isPending ? "pending" : isActive ? "active" : ""
+                    <NavLink
+                        to='/contact'
+                        className={({ isActive, isPending }) =>
+                        isPending ? "pending" : isActive ? "active navigationLink" : "navigationLink"
                     }
-                >My Work
-                </NavLink>
+                    >Contact
+                    </NavLink>
 
-                <NavLink
-                    to='/contact'
-                    className={({ isActive, isPending }) =>
-                        isPending ? "pending" : isActive ? "active" : ""
+                    <NavLink
+                        to='/resume'
+                        className={({ isActive, isPending }) =>
+                        isPending ? "pending" : isActive ? "active navigationLink" : "navigationLink"
                     }
-                >Contact
-                </NavLink>
-
-                <NavLink
-                    to='/resume'
-                    className={({ isActive, isPending }) =>
-                        isPending ? "pending" : isActive ? "active" : ""
-                    }
-                >Resume
-                </NavLink>
-            </div>
-
-        </header>
-
-
-
+                    >Resume
+                    </NavLink>
+            </Col>
+        </Row>
 
     )
 }
