@@ -1,48 +1,83 @@
+import React from 'react';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
+import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import '../styles/contact.css'
 
+
 export default function Contact() {
 
     return (
-        <section id='contactMe'>
+        <Container fluid>
+            <Row >
+                <div className='sectionHeader'>
+                    <h2>Contact Me</h2>
+                    <h5>Reach our for work, hire, or general inquiries</h5>
+                </div>
+            </Row>
 
-            <div className='sectionHeader'>
-                <h2>Contact Me</h2>
-                <h5>Reach out for hire, work, or general questions/feedback</h5>
-            </div>
+            <Formik
+                initialValues={{ email: '', name: '', message: '' }}
+                validate={values => {
+                    const errors = {};
 
-            <Row className='contactRow'>
-                <Col className='contactCol' sm={10}>
-                    <Form>
-                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                            <Form.Label>Name</Form.Label>
-                            <Form.Control type="email" placeholder="Dragonfly Jones" />
-                        </Form.Group>
+                    // errors for email
+                    if (!values.email) {
+                        errors.email = 'Email Required';
+                    } else if (
+                        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+                    ) {
+                        errors.email = 'Invalid email address';
+                    }
 
-                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                            <Form.Label>Email address</Form.Label>
-                            <Form.Control type="email" placeholder="dFlyDojo@gmail.com" />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                            <Form.Label>Message</Form.Label>
-                            <Form.Control as="textarea" rows={3} />
-                        </Form.Group>
+                    // errors for name
+                    if (!values.name) {
+                        errors.name = 'Name Required'
+                    }
 
-                        <Button variant="dark" type="submit">
+                    // errors for message
+                    if (!values.message) {
+                        errors.message = 'Message Required'
+                    }
+
+                    return errors;
+                }}
+                onSubmit={(values, { setSubmitting }) => {
+                    window.location.reload();
+                    setTimeout(() => {
+                        // alert(JSON.stringify(values, null, 2));
+                        setSubmitting(false);
+                    }, 400);
+                }}
+            >
+                {({ isSubmitting }) => (
+                    <Form className='contactForm'>
+
+                        <label htmlFor='name'>Name</label>
+                        <Field id='name' type="text" name="name" />
+                        <ErrorMessage name="name" component="div" />
+
+
+                        <label htmlFor='email'>Email</label>
+                        <Field id='email' type="email" name="email" />
+                        <ErrorMessage name="email" component="div" />
+
+                        <label htmlFor='message'>Message</label>
+                        <Field id='message' as='textarea' name="message" />
+                        <ErrorMessage name="message" component="div" />
+
+                        <Button className='submitButton' type="submit" disabled={isSubmitting}>
                             Submit
                         </Button>
                     </Form>
+                )}
+            </Formik>
 
-                </Col>
-            </Row>
+        </Container>
 
-
-
-        </section>
     );
 
 }
