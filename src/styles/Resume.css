@@ -2,7 +2,6 @@
 .resumeSection {
     display: flex;
     flex-direction: column;
-    overflow-x: scroll;
 }
 
 .resumeRow {
@@ -33,6 +32,7 @@ iframe {
     border-radius: 10px;
     margin: 10px;
     box-shadow: 3px 3px 5px black;
+    overflow-x: scroll;
 }
 
 .download {

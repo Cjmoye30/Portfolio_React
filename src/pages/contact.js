@@ -1,65 +1,70 @@
+import React from 'react';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 import Button from 'react-bootstrap/Button';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-
-import { useState } from 'react';
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
 
 import '../styles/contact.css'
 
+
 export default function Contact() {
-
-    const [validated, setValidated] = useState(false);
-
-    const handleSubmit = (event) => {
-      const form = event.currentTarget;
-      if (form.checkValidity() === false) {
-        event.preventDefault();
-        event.stopPropagation();
-      }
-  
-      setValidated(true);
-    };
 
     return (
         <section id='contactMe'>
+            <Formik
+                initialValues={{ email: '', name: '', message: '' }}
+                validate={values => {
+                    const errors = {};
 
-            <div className='sectionHeader'>
-                <h2>Contact Me</h2>
-                <h5>Reach out for hire, work, or general questions/feedback</h5>
-            </div>
+                    // errors for email
+                    if (!values.email) {
+                        errors.email = 'Email Required';
+                    } else if (
+                        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+                    ) {
+                        errors.email = 'Invalid email address';
+                    }
 
-            <Row className='contactRow'>
-                <Col className='contactCol' sm={10}>
-                    <Form noValidate validated={validated} onSubmit={handleSubmit}>
+                    // errors for name
+                    if (!values.name) {
+                        errors.name = 'Name Required'
+                    }
 
-                        <Form.Group  className="mb-3" controlId="contactName">
-                            <Form.Label>Name</Form.Label>
-                            <Form.Control required type="text" placeholder="Dragonfly Jones" />
-                        </Form.Group>
+                    // errors for message
+                    if (!values.message) {
+                        errors.message = 'Message Required'
+                    }
 
-                        <Form.Group className="mb-3" controlId="contactEmail">
-                            <Form.Label>Email address</Form.Label>
-                            <Form.Control required type="email" placeholder="dFlyDojo@gmail.com" />
-                        </Form.Group>
+                    return errors;
+                }}
+                onSubmit={(values, { setSubmitting }) => {
+                    window.location.reload();
+                    setTimeout(() => {
+                        // alert(JSON.stringify(values, null, 2));
+                        setSubmitting(false);
+                    }, 400);
+                }}
+            >
+                {({ isSubmitting }) => (
+                    <Form className='contactForm'>
+                        
+                        <label htmlFor='name'>Name</label>
+                        <Field id='name' type="text" name="name" />
+                        <ErrorMessage name="name" component="div" />
 
-                        <Form.Group className="mb-3" controlId="contactMessage">
-                            <Form.Label>Message</Form.Label>
-                            <Form.Control required as="textarea" rows={3} />
-                        </Form.Group>
 
-                        <Button variant="dark" type="submit">
+                        <label htmlFor='email'>Email</label>
+                        <Field id='email' type="email" name="email" />
+                        <ErrorMessage name="email" component="div" />
+
+                        <label htmlFor='message'>Message</label>
+                        <Field id='message' as='textarea' name="message" />
+                        <ErrorMessage name="message" component="div" />
+
+                        <button className='submitButton' type="submit" disabled={isSubmitting}>
                             Submit
-                        </Button>
-
+                        </button>
                     </Form>
-
-                </Col>
-            </Row>
-
-
-
+                )}
+            </Formik>
         </section>
     );
 
