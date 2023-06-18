@@ -1,6 +1,9 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 import '../styles/contact.css'
 
@@ -8,7 +11,14 @@ import '../styles/contact.css'
 export default function Contact() {
 
     return (
-        <section id='contactMe'>
+        <Container fluid>
+            <Row >
+                <div className='sectionHeader'>
+                    <h2>Contact Me</h2>
+                    <h5>Reach our for work, hire, or general inquiries</h5>
+                </div>
+            </Row>
+
             <Formik
                 initialValues={{ email: '', name: '', message: '' }}
                 validate={values => {
@@ -45,7 +55,7 @@ export default function Contact() {
             >
                 {({ isSubmitting }) => (
                     <Form className='contactForm'>
-                        
+
                         <label htmlFor='name'>Name</label>
                         <Field id='name' type="text" name="name" />
                         <ErrorMessage name="name" component="div" />
@@ -59,13 +69,15 @@ export default function Contact() {
                         <Field id='message' as='textarea' name="message" />
                         <ErrorMessage name="message" component="div" />
 
-                        <button className='submitButton' type="submit" disabled={isSubmitting}>
+                        <Button className='submitButton' type="submit" disabled={isSubmitting}>
                             Submit
-                        </button>
+                        </Button>
                     </Form>
                 )}
             </Formik>
-        </section>
+
+        </Container>
+
     );
 
 }

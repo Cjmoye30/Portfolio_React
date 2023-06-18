@@ -2,10 +2,29 @@
     display: flex;
     flex-direction: column;
     padding: 50px;
+    margin: 50px;
+    background-color: var(--b5);
+    border: 1px solid var(--b1);
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px black;
 }
 
 .submitButton {
     margin: 10px auto;
     width: 200px;
     padding: 10px;
+    background-color: var(--b1);
+    color: var(--b2);
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px black;
+    border: none;
 }
+
+.submitButton:hover {
+    background-color: var(--b2);
+    color: var(--b1);
+    border: none;
+}
+
