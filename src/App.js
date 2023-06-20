@@ -29,6 +29,7 @@ function App() {
       <Header />
       <div style={styles.height}>
         <Routes>
+          <Route path="*" element={<About bio={bio} />} />
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About bio={bio} />} />
           <Route path="/projects" element={<Projects projects={projects} />} />
