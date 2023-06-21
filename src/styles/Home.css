@@ -22,10 +22,30 @@
 }
 
 .aboutMeButton {
+    display: flex;
+    align-items: center;
     background-color: var(--b1);
     color: var(--b2);
     border: 1px solid var(--b4);
-    box-shadow: 1px 1px 4px black; 
+    box-shadow: 1px 1px 4px black;
+    max-width: 250px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.aboutMeText {
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    color: var(--b2);
+}
+
+.aboutMeIcon {
+    padding: 0px 5px;
 }
 
 .aboutMeButton:hover {

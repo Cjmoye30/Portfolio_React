@@ -1,9 +1,11 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
-import Stack from 'react-bootstrap/Stack';
+// import Stack from 'react-bootstrap/Stack';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
+import { NavLink } from "react-router-dom";
+
 
 // Css
 import '../styles/Home.css'
@@ -61,16 +63,6 @@ const styles = {
     wordWrap: 'wrap',
   },
 
-  button: {
-    maxWidth: '250px',
-    padding: '20px',
-    margin: '50px auto',
-    display: 'flex',
-    justifyContent: 'space-evenly',
-    alignItems: 'center',
-    flexWrap: 'no-wrap'
-  },
-
   bioIcon: {
     position: 'absolute',
     maxHeight: '100px',
@@ -81,7 +73,7 @@ const styles = {
 }
 
 const locationIcon = <FontAwesomeIcon icon={faLocationDot} />
-const arrowDown = <FontAwesomeIcon icon={faArrowRight} beat size="xl" />
+const arrowDown = <FontAwesomeIcon icon={faArrowRight} beat size="lg" />
 
 function Intro() {
 
@@ -91,7 +83,7 @@ function Intro() {
       <Row style={styles.introContainer} >
         <Col lg={5}>
           <div className='homeAvatar' style={styles.introImageWrapper}>
-            <img style={styles.avatar} src={avatar} />
+            <img style={styles.avatar} src={avatar} alt=' ' />
           </div>
 
           <div className="logo-subtitle">
@@ -107,33 +99,34 @@ function Intro() {
           <Col className='outerCard' sm={3} xs={12}>
             <Col className='card' style={styles.miniCard} >
               <h5>Full Stack Web Developer</h5>
-              <img style={styles.bioIcon} src={codingIcon} />
+              <img style={styles.bioIcon} src={codingIcon} alt=' ' />
             </Col>
           </Col>
 
           <Col className='outerCard' sm={3} xs={12}>
             <Col className='card' style={styles.miniCard}>
               <h5>Supply Chain Professional</h5>
-              <img style={styles.bioIcon} src={supplyChainIcon} />
+              <img style={styles.bioIcon} src={supplyChainIcon} alt=' ' />
             </Col>
           </Col>
 
           <Col className='outerCard' sm={3} xs={12}>
             <Col className='card' style={styles.miniCard}>
               <h5>Former Professional Baseball Player</h5>
-              <img style={styles.bioIcon} src={baseballIcon} />
+              <img style={styles.bioIcon} src={baseballIcon} alt=' ' />
             </Col>
           </Col>
 
           <Col className='outerCard' sm={3} xs={12}>
             <Col className='card' style={styles.miniCard}>
               <h5>Self-Proclaimed Chef</h5>
-              <img style={styles.bioIcon} src={chefIcon} />
+              <img style={styles.bioIcon} src={chefIcon} alt=' ' />
             </Col>
           </Col>
 
         </Row>
-        <Button className='aboutMeButton' href='/about' style={styles.button}> <h5>More About Me</h5> {arrowDown} </Button>
+        
+        <Button className='aboutMeButton' style={styles.button}> <NavLink className='aboutMeText' to='/about'> <h5>More About Me</h5> {arrowDown} </NavLink>  </Button> 
 
       </Row>
 
