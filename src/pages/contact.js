@@ -3,7 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { NavLink } from "react-router-dom";
 
 import '../styles/contact.css'
 
@@ -47,6 +47,7 @@ export default function Contact() {
                 }}
                 onSubmit={(values, { setSubmitting }) => {
                     window.location.reload();
+
                     setTimeout(() => {
                         // alert(JSON.stringify(values, null, 2));
                         setSubmitting(false);
