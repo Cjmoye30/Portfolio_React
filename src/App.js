@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
+
 // Import pages
 import Home from './pages/home'
 import About from './pages/about'
@@ -25,7 +26,9 @@ const styles = {
 
 function App() {
   return (
-    <Router>
+
+    // I need to configure the router somehow
+    <Router basename='/Portfolio_React'>
       <Header />
       <div style={styles.height}>
         <Routes>

@@ -22,7 +22,7 @@ export default function Header() {
         <Row className="header">
             <Col md={3} className="navLogo">
                 <div>
-                    <img style={styles.logo} src={logo} />
+                    <img style={styles.logo} src={logo} alt=" "/>
                 </div>
 
             </Col>
