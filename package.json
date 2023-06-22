@@ -29,8 +29,8 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "webpack-dev-server --devtool eval-source-map --host 0.0.0.0 --disable-host-check --open-page Portfolio_React",
-    "build": "react-scripts build",    
+    "start": "react-scripts start",
+    "build": "react-scripts build",   
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
