@@ -16,12 +16,12 @@
   
   ### Description:
 
-  - Personal portfolio built using React. This is a single-page application which consists of a homepage, about me page, projects, contact, and resume page. All pages are accessed using React.dom.router - meaning it remains a single-page application. All projects in the portfolio page have active links to both repo's and live sites
+  - Personal portfolio built using React. This is a single-page application which consists of a homepage, about me page, projects, contact, and resume page. All pages are accessed using React.dom.router - meaning it remains a single-page application. All projects in the portfolio page have active links to both repo's and live sites.
 
 
   ### Screenshots: 
 
-  - [Github Live Site]()
+  - [Github Live Site](https://cjmoye30.github.io/Portfolio_React/)
   - Screenshot:
   ![CLI Interface](/src/assets/screenshots/aboutMe.png)
   ![CLI Interface](/src/assets/screenshots/contact.png)
