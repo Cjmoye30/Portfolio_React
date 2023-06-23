@@ -28,7 +28,7 @@ export default function Header() {
             </Col>
             <Col md={6} className="navCol">
                     <NavLink
-                        to='/'
+                        to='/home'
                         className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "active navigationLink" : "navigationLink"
                         }
@@ -36,7 +36,7 @@ export default function Header() {
                     </NavLink>
 
                     <NavLink
-                        to='/about'
+                        to='/'
                         className={({ isActive, isPending }) =>
                         isPending ? "pending" : isActive ? "active navigationLink" : "navigationLink"
                     }
