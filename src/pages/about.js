@@ -1,4 +1,3 @@
-import Stack from 'react-bootstrap/Stack';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -60,7 +59,7 @@ export default function AboutMe({ bio }) {
                     <div>
                         <Row className='imgBioRow'>
                             <Col className='imgCol'>
-                                <img style={styles.avatar} className="about-me-avatar" src={data.avatar} />
+                                <img style={styles.avatar} className="about-me-avatar" src={data.avatar} alt=' ' />
                             </Col>
                             <Col className='bioCol' xl={8} md={12}>
                                 <div className="pillars">
