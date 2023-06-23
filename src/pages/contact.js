@@ -3,7 +3,6 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import { NavLink } from "react-router-dom";
 
 import '../styles/contact.css'
 
@@ -46,7 +45,9 @@ export default function Contact() {
                     return errors;
                 }}
                 onSubmit={(values, { setSubmitting }) => {
-                    window.location.reload();
+                    // window.location.reload();
+
+                    // on button click - just take back to the project URL?
 
                     setTimeout(() => {
                         // alert(JSON.stringify(values, null, 2));

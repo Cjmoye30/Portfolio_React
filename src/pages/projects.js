@@ -54,8 +54,8 @@ function Projects({ projects }) {
             <p className='projectDesc'>{projects[0].description}</p>
             <p className='projectLanguages'>{projects[0].languages}</p>
             <div className='projectLinks'>
-              <a target='_blank' href={projects[0].repo}>Repo</a>
-              <a target='_blank' href={projects[0].site}>Site</a>
+              <a rel='noreferrer' target='_blank' href={projects[0].repo}>Repo</a>
+              <a rel='noreferrer' target='_blank' href={projects[0].site}>Site</a>
             </div>
           </div>
         </Col>
@@ -76,8 +76,8 @@ function Projects({ projects }) {
                   <p>{project.description}</p>
                   <p>{project.languages}</p>
                   <div className='projectLinks'>
-                    <a target='_blank' href={project.repo}>Repo</a>
-                    <a target='_blank' href={project.site}>Site</a>
+                    <a rel='noreferrer' target='_blank' href={project.repo}>Repo</a>
+                    <a rel='noreferrer' target='_blank' href={project.site}>Site</a>
                   </div>
                 </div>
               </div>
