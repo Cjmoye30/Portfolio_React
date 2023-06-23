@@ -31,8 +31,8 @@ function App() {
       <div style={styles.height}>
         <Routes>
           <Route path="*" element={<About bio={bio} />} />
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About bio={bio} />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<About bio={bio} />} />
           <Route path="/projects" element={<Projects projects={projects} />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/resume" element={<Resume />} />
