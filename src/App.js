@@ -26,7 +26,6 @@ const styles = {
 function App() {
   return (
 
-    // I need to configure the router somehow
     <Router basename='/Portfolio_React'>
       <Header />
       <div style={styles.height}>
