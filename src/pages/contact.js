@@ -46,7 +46,9 @@ export default function Contact() {
                     return errors;
                 }}
                 onSubmit={(values, { setSubmitting }) => {
-                    window.location.reload();
+                    // window.location.reload();
+
+                    // on button click - just take back to the project URL?
 
                     setTimeout(() => {
                         // alert(JSON.stringify(values, null, 2));
