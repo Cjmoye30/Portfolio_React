@@ -67,7 +67,7 @@ iframe {
 
 @media screen and (max-width: 560px) {
     iframe {
-        width: 800px;
+        display: none;
     }
 
     .skillBreak {
