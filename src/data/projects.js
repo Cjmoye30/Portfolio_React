@@ -6,6 +6,17 @@
 const projects = [
     // ------------ Main project ------------
     {
+        title: 'Arcade Assembly',
+        imageURL: require('../assets/images/arcadeAssemblyHome.png'),
+        description: 'Find your favorite games and create groups with other gamers',
+        languages: 'React, Express, Bootstrap, GraphQL',
+        altText: ' ',
+        repo: 'https://github.com/brandta-1/please-hire-us',
+        site: 'https://secure-shelf-48265-8313c8b84650.herokuapp.com/',
+    },
+
+    // ------------ Other projects ------------
+    {
         title: 'DreamerGPT',
         imageURL: require('../assets/images/DreamerGPT.png'),
         description: 'Interpret and log dreams with ChatGPT Open AI',
@@ -15,7 +26,6 @@ const projects = [
         site: 'https://protected-hamlet-16560.herokuapp.com/',
     },
 
-    // ------------ Other projects ------------
     {
         title: 'TechBlog',
         imageURL: require('../assets/images/TechBlog.png'),
