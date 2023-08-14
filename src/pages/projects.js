@@ -41,7 +41,7 @@ function Projects({ projects }) {
       <Row >
         <div className='sectionHeader'>
           <h2>My Projects</h2>
-          <h5>Some of my most recent work</h5>
+          <h5>Some of my most recent work - TEST TEST</h5>
         </div>
       </Row>
 
