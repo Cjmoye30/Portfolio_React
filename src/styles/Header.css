@@ -13,8 +13,6 @@
     color: var(--b4)
 }
 
-
-
 .navCol {
     display: flex;
     align-items: center;
@@ -41,7 +39,7 @@
     /* opacity: .7; */
     box-shadow: 0 10px 8px -7px var(--b2);
     transform: translateY(-8px);
-    animation: navShift .5s;
+    animation: navShift .5s ease-in-out;
 }
 
 @keyframes navShift {

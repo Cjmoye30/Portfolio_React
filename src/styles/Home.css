@@ -13,35 +13,47 @@
 }
 
 .outerCard {
-    margin: 5px 0;
+    margin: 20px 0;
+    transition: transform 0.4s ease-in-out;
+    width: 100%;
 }
 
 .card {
-    background-color: var(--b4);
-    box-shadow: 1px 1px 4px black;
+    background-color: var(--b3);
+    box-shadow: 0 10px 8px -7px black;
+    color: var(--b6)
 }
 
 .aboutMeButton {
     display: flex;
-    align-items: center;
     background-color: var(--b1);
     color: var(--b2);
     border: 1px solid var(--b4);
     box-shadow: 1px 1px 4px black;
-    max-width: 250px;
+    min-width: 300px;
     margin: 50px auto;
-    padding: 20px;
 }
 
 .aboutMeText {
-    text-decoration: none;
-    font-size: 1.5rem;
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
-    align-items: center;
-    justify-content: space-evenly;
     color: var(--b2);
+    text-decoration: none;
+}
+
+.buttonText {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+.buttonText h5 {
+    margin-bottom: 0;
 }
 
 .aboutMeIcon {
@@ -52,4 +64,23 @@
     background-color: var(--b1);
     opacity: .7;
     border: 1px solid var(--b4);
+}
+
+.homeCardLink {
+    text-decoration: none;
+}
+
+.outerCard:hover {
+    transform: scale(1.03);
+}
+
+.homeContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.cardRow {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }

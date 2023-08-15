@@ -4,8 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-import { NavLink } from "react-router-dom";
-
+import { NavLink, Link } from "react-router-dom";
 
 // Css
 import '../styles/Home.css'
@@ -26,7 +25,7 @@ const styles = {
   introContainer: {
     minHeight: '100vh',
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center'
@@ -44,7 +43,7 @@ const styles = {
   },
 
   avatar: {
-    maxHeight: '370px',
+    maxHeight: '600px',
     width: 'auto'
   },
 
@@ -79,9 +78,9 @@ function Intro() {
 
   return (
 
-    <Container fluid>
+    <Container fluid className='homeContainer'>
       <Row style={styles.introContainer} >
-        <Col lg={5}>
+        <Col lg={6}>
           <div className='homeAvatar' style={styles.introImageWrapper}>
             <img style={styles.avatar} src={avatar} alt=' ' />
           </div>
@@ -94,41 +93,64 @@ function Intro() {
           </div>
         </Col>
 
-        <Row>
-
-          <Col className='outerCard' sm={3} xs={12}>
-            <Col className='card' style={styles.miniCard} >
-              <h5>Full Stack Web Developer</h5>
-              <img style={styles.bioIcon} src={codingIcon} alt=' ' />
+        <Col lg={4}>
+          <div className='cardRow'>
+            <Col className='outerCard' sm={3} xs={12}>
+              <Link className='homeCardLink' to='https://github.com/Cjmoye30' target='_blank'>
+                <Col className='card' style={styles.miniCard} >
+                  <h5 className='cardText'>Full Stack Web Developer</h5>
+                  <img style={styles.bioIcon} src={codingIcon} alt=' ' />
+                </Col>
+              </Link>
             </Col>
-          </Col>
 
-          <Col className='outerCard' sm={3} xs={12}>
-            <Col className='card' style={styles.miniCard}>
-              <h5>Supply Chain Professional</h5>
-              <img style={styles.bioIcon} src={supplyChainIcon} alt=' ' />
+            <Col className='outerCard' sm={3} xs={12}>
+              <Link className='homeCardLink' to='https://www.linkedin.com/in/cambric-moye-30/' target='_blank'>
+                <Col className='card' style={styles.miniCard}>
+                  <h5 className='cardText'>Supply Chain Professional</h5>
+                  <img style={styles.bioIcon} src={supplyChainIcon} alt=' ' />
+                </Col>
+              </Link>
             </Col>
-          </Col>
 
-          <Col className='outerCard' sm={3} xs={12}>
-            <Col className='card' style={styles.miniCard}>
-              <h5>Former Professional Baseball Player</h5>
-              <img style={styles.bioIcon} src={baseballIcon} alt=' ' />
+            <Col className='outerCard' sm={3} xs={12}>
+              <Link className='homeCardLink' to='https://www.baseball-reference.com/register/player.fcgi?id=moye--000cam' target='_blank'>
+                <Col className='card' style={styles.miniCard}>
+                  <h5 className='cardText'>Former Professional Baseball Player</h5>
+                  <img style={styles.bioIcon} src={baseballIcon} alt=' ' />
+                </Col>
+              </Link>
             </Col>
-          </Col>
 
-          <Col className='outerCard' sm={3} xs={12}>
-            <Col className='card' style={styles.miniCard}>
-              <h5>Self-Proclaimed Chef</h5>
-              <img style={styles.bioIcon} src={chefIcon} alt=' ' />
+            <Col className='outerCard' sm={3} xs={12}>
+              <Link className='homeCardLink' to='https://sleepy-beach-12267-a5c989dbbda6.herokuapp.com/' target='_blank'>
+                <Col className='card' style={styles.miniCard}>
+                  <h5 className='cardText'>Self-Proclaimed Chef</h5>
+                  <img style={styles.bioIcon} src={chefIcon} alt=' ' />
+                </Col>
+              </Link>
             </Col>
-          </Col>
+          </div>
+        </Col>
 
-        </Row>
-        
-        <Button className='aboutMeButton' style={styles.button}> <NavLink className='aboutMeText' to='/about'> <h5>More About Me</h5> {arrowDown} </NavLink>  </Button> 
-
+        <Col xs={12}>
+          <Button
+            className='aboutMeButton'
+            style={styles.button}
+          >
+            <NavLink
+              className='aboutMeText'
+              to='/about'
+            >
+              <div className='buttonText'>
+                <h5>More About Me</h5> {arrowDown}
+              </div>
+            </NavLink>
+          </Button>
+        </Col>
       </Row>
+
+
 
     </Container>
 

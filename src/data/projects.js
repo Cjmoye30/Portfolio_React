@@ -17,6 +17,15 @@ const projects = [
 
     // ------------ Other projects ------------
     {
+        title: 'Not Another Cookbook',
+        imageURL: require('../assets/images/not-another-cookbook1.png'),
+        description: 'Track all of your favorite recipes for you and your family',
+        languages: 'React, Express, GraphQL, Material UI',
+        altText: 'space background',
+        repo: 'https://github.com/Cjmoye30/Not_Another_Cookbook-React',
+        site: 'https://sleepy-beach-12267-a5c989dbbda6.herokuapp.com/',
+    },
+    {
         title: 'DreamerGPT',
         imageURL: require('../assets/images/DreamerGPT.png'),
         description: 'Interpret and log dreams with ChatGPT Open AI',
