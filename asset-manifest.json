@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/Portfolio_React/static/css/main.4fd4c2f5.css",
-    "main.js": "/Portfolio_React/static/js/main.7314f7a9.js",
+    "main.css": "/Portfolio_React/static/css/main.9ae70793.css",
+    "main.js": "/Portfolio_React/static/js/main.d9d7f8af.js",
     "static/media/mainHeadshot.png": "/Portfolio_React/static/media/mainHeadshot.c241a4a524fc1ce7317b.png",
     "static/media/avatar.png": "/Portfolio_React/static/media/avatar.ee5533f3f25104acb09e.png",
     "static/media/RecipeHub.png": "/Portfolio_React/static/media/RecipeHub.105801aad7eee466eda0.png",
+    "static/media/not-another-cookbook1.png": "/Portfolio_React/static/media/not-another-cookbook1.c9a7616bd27587d2444e.png",
     "static/media/arcadeAssemblyHome.png": "/Portfolio_React/static/media/arcadeAssemblyHome.9b3e5ddf99218a3f8a01.png",
     "static/media/TechBlog.png": "/Portfolio_React/static/media/TechBlog.bbdbf2d9ac7a583a0934.png",
     "static/media/Portfolio.png": "/Portfolio_React/static/media/Portfolio.93b92c609b18a50715fb.png",
@@ -27,11 +28,11 @@
     "static/media/css.svg": "/Portfolio_React/static/media/css.1072a59dad7bcd4e8c82de4fca0cb597.svg",
     "static/media/stack-overflow.svg": "/Portfolio_React/static/media/stack-overflow.abedb01cc897c85bde85cbe48560f233.svg",
     "static/media/html5.svg": "/Portfolio_React/static/media/html5.df324691481d1b1c9b1fbe01f8563975.svg",
-    "main.4fd4c2f5.css.map": "/Portfolio_React/static/css/main.4fd4c2f5.css.map",
-    "main.7314f7a9.js.map": "/Portfolio_React/static/js/main.7314f7a9.js.map"
+    "main.9ae70793.css.map": "/Portfolio_React/static/css/main.9ae70793.css.map",
+    "main.d9d7f8af.js.map": "/Portfolio_React/static/js/main.d9d7f8af.js.map"
   },
   "entrypoints": [
-    "static/css/main.4fd4c2f5.css",
-    "static/js/main.7314f7a9.js"
+    "static/css/main.9ae70793.css",
+    "static/js/main.d9d7f8af.js"
   ]
 }
